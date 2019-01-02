@@ -161,7 +161,7 @@ public class DoSurveyActivity extends AppUtilBasement {
 
     @Override
     public void setButtonListener() {
-        llBack.setOnClickListener(new View.OnClickListener() {
+        llBack.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 int tag = (int) v.getTag();
@@ -189,6 +189,4 @@ public class DoSurveyActivity extends AppUtilBasement {
     public void butterBind() {
         ButterKnife.bind(this);
     }
-
-
 }

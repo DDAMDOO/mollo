@@ -226,23 +226,23 @@
             android:id="@+id/llSleepPattern"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="35dp">
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal">
 
             <ImageView
                 android:layout_width="20.5dp"
                 android:layout_height="19dp"
                 android:layout_gravity="center_vertical"
-                android:src="@mipmap/icn_sleep"/>
+                android:src="@mipmap/icn_sleep" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:textSize="16sp"
-                android:textColor="#fff"
                 android:text="@string/sleeing_pattern"
-                app:fontName="RoundR"/>
+                android:textColor="#fff"
+                android:textSize="16sp"
+                app:fontName="RoundR" />
         </LinearLayout>
 
         <LinearLayout

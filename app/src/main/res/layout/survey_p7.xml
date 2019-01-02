@@ -64,23 +64,4 @@
         android:thumb="@mipmap/oval" />
 
 
-
-
-    <!--<TextView-->
-        <!--android:id="@+id/tvStart"-->
-        <!--android:layout_width="79dp"-->
-        <!--android:layout_height="31.5dp"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentRight="true"-->
-        <!--android:layout_marginBottom="59dp"-->
-        <!--android:layout_marginRight="27dp"-->
-        <!--android:gravity="center"-->
-        <!--android:textColor="@color/white"-->
-        <!--android:textSize="15sp"-->
-        <!--android:letterSpacing="-0.01"-->
-        <!--android:textStyle="bold"-->
-        <!--android:text="@string/start"-->
-        <!--android:background="@drawable/start_button" />-->
-
-
 </RelativeLayout>
