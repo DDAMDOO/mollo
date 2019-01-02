@@ -1,0 +1,139 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "themollo.app.mollo"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    repositories {
+        mavenCentral()
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    buildToolsVersion '28.0.3'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.android.support:support-compat:26.1.0'
+    implementation 'com.android.support:animated-vector-drawable:26.1.0'
+    implementation 'com.android.support:customtabs:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+
+    //test
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //firebase
+
+    //noinspection GradleCompatible
+    implementation 'com.google.firebase:firebase-database:11.8.0'
+    implementation 'com.google.firebase:firebase-auth:11.8.0'
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'com.firebaseui:firebase-ui-auth:3.2.2'
+    implementation 'com.firebaseui:firebase-ui-database:2.3.0'
+
+    //alert dialog
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+    //sns
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    implementation 'com.facebook.android:facebook-android-sdk:4.+'
+
+    //butter knife
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //circle indicator
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+
+    //floating button
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+
+    //mpchart
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    //circle image view
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //image loader
+    implementation 'com.github.bumptech.glide:glide:4.7.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
+
+    //circular bar
+    implementation 'com.github.Triggertrap:SeekArc:v1.1'
+
+    //wheel picker
+    implementation 'cn.aigestudio.wheelpicker:WheelPicker:1.1.2'
+
+    //lottie animation
+    implementation 'com.airbnb.android:lottie:2.5.1'
+
+    //drawer
+    implementation 'com.ikimuhendis:ldrawer:0.1'
+
+    //rxpaparazzo
+    implementation 'com.github.miguelbcr:RxPaparazzo:0.6.0-2.x'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //timelytextview
+    implementation 'com.github.iballan:TimelyView:1.0.2'
+
+    //boot anim
+    implementation 'com.github.ybq:Android-SpinKit:1.0.5'
+    implementation 'com.github.ybq:nougat-boot-animation:1.0.1'
+
+    //graph
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
+
+    //custom font
+    implementation 'com.github.katoro:typekit:1.0.1'
+
+    //gif
+    implementation 'com.felipecsl:gifimageview:2.2.0'
+
+    //io
+    implementation 'commons-io:commons-io:2.6'
+
+    //play button
+    implementation 'com.github.recruit-lifestyle:PlayPauseButton:1.0'
+}
+apply plugin: 'com.google.gms.google-services'
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.1.0'
+            }
+        }
+    }
+}

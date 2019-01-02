@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="360dp"
+    android:background="@color/appColor"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="@string/sleep_sound_time"
+            android:textSize="18dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#aaa"
+        android:layout_below="@id/rlTop"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlTime"
+        android:layout_below="@id/rlTop"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tvSoundSleepTimeHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/tvHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tvSoundSleepTimeHour"
+            android:text="h"
+            android:textColor="#fff"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tvSoundSleepTimeMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/tvHours"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/tvMins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/tvSoundSleepTimeMin"
+            android:text="mins"
+            android:textColor="#fff"
+            android:textSize="24dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/flSoundTime"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/rlTime"
+        android:layout_marginTop="20dp"
+        android:clipChildren="false">
+
+        <themollo.app.mollo.util.MySeekArc
+            android:id="@+id/saSoundTime"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:padding="20dp"
+
+            app:arcColor="@color/alarm_progress_color"
+            app:arcWidth="3dp"
+            app:clockwise="true"
+            app:max="720"
+            app:progressColor="#fff"
+            app:progressWidth="3dp"
+            app:rotation="275"
+            app:startAngle="0"
+            app:sweepAngle="170"
+            app:thumb="@drawable/seekarc_thumb"
+            app:touchInside="false" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#aaa"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@id/llConfirm"/>
+
+    <LinearLayout
+        android:id="@+id/llConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:text="@string/confirm"/>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

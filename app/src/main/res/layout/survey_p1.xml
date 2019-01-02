@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="themollo.app.mollo.survey.survey_fragment.Survey_p1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87.5dp"
+        android:letterSpacing="0"
+        android:text="@string/survey_1_text"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+
+    
+    <LinearLayout
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:background="@drawable/input_box"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="27.5dp">
+
+        <LinearLayout
+            android:id="@+id/llMale"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/survey_button_left_round"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male"
+                android:textColor="@color/survey_text_color"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/survey_border_color"/>
+
+        <LinearLayout
+            android:id="@+id/llFemale"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/survey_button_right_round"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female"
+                android:textColor="@color/survey_text_color"
+                android:textSize="21sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

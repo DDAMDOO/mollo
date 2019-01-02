@@ -1,0 +1,153 @@
+<resources>
+    <string name="app_name">Mollo</string>
+    <string name="kakao_app_key">4422cf6abc2140ffaa1f80ba598862c8</string>
+    <string name="facebook_app_id">662919707381310</string>
+    <string name="app_name_2">Honey Sleep</string>
+    <string name="splash_bottom">(주)Humming LAB</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+
+    <!-- tutorial -->
+    <string name="tutorial_1_text">Fill survey questions\nabout your sleep habit</string>
+    <string name="tutorial_2_text">Set alarm\nby adjusting circular bar</string>
+    <string name="tutorial_3_text">Set lullaby\nfor your comfortable sleep</string>
+    <string name="tutorial_4_text">Connect Mollo Diffuser\nand spread your favorite scent</string>
+    <string name="tutorial_5_text">We analyze your sleep\nand offer solution</string>
+
+    <!-- alarm -->
+    <string name="you_can_sleep">YOU CAN SLEEP</string>
+    <string name="for_">for</string>
+    <string name="hour">hour</string>
+    <string name="dont_worry">Don’t worry and good night!</string>
+    <string name="wake_up">WAKE UP!</string>
+
+    <!-- login -->
+    <string name="login">LOGIN</string>
+    <string name="log_in">LOG IN</string>
+    <string name="kakao_login">Login with Kakao Account</string>
+    <string name="facebook_login">Login with Facebook Account</string>
+    <string name="email_login">LOGIN WITH E-MAIL</string>
+    <string name="anonymous_login">LOGIN ANONYMOUSLY</string>
+    <string name="register">REGISTER</string>
+    <string name="password_confirm">PASSWORD CONFIRM</string>
+    <string name="password">PASSWORD</string>
+    <string name="e_mail">E-MAIL</string>
+    <string name="full_name">FULL NAME</string>
+    <string name="have_account">DON’T HAVE AN ACCOUNT?</string>
+    <string name="agree">If you sign up, \nit is regarded as you accept terms and conditions.</string>
+
+    <!-- survey -->
+    <string name="pageNum">\/7</string>
+    <string name="done">If you done,\nclick here!</string>
+    <string name="survey_1_text">당신의 성별은?</string>
+    <string name="male">남자</string>
+    <string name="female">여자</string>
+    <string name="survey_2_text">당신의 나이대는?</string>
+    <string name="age1020s">10-20</string>
+    <string name="age3040s">30-40</string>
+    <string name="age50s">50</string>
+    <string name="ages">대</string>
+    <string name="overAges">대 이상</string>
+    <string name="survey_3_text">지난 한달,\n평균 자는 시간은 몇 시간?</string>
+    <string name="hours">시간</string>
+    <string name="survey_4_text">그 중 숙면시간은?</string>
+    <string name="survey_5_text">잠을 방해하는 요소 9가지 중\n해당하는 것을 고르세요</string>
+    <string name="survey_6_text">잠을 돕는 약을\n얼마나 복용 중인가요?</string>
+    <string name="per">회/주</string>
+    <string name="survey_7_text">최근 일상생활 중에\n졸렸던 적이 얼마나 되나요?</string>
+    <string name="start">START</string>
+    <string name="survey_result">SURVEY ANALYSIS</string>
+    <string name="your_sleep_score">YOUR\nSLEEP SCORE</string>
+    <string name="diffuser_scent_recommended">DIFFUSER\nSCENT\nRECOMMENDED</string>
+    <string name="points">pts.</string>
+
+    <!-- symptoms -->
+    <string name="symp1">30분 안에 잠에 들지 못함</string>
+    <string name="symp2">중간에 깸</string>
+    <string name="symp3">화장실때문에</string>
+    <string name="symp4">호흡이 불안함</string>
+    <string name="symp5">심하게 기침을 하거나 코를 곪</string>
+    <string name="symp6">너무 추움</string>
+    <string name="symp7">너무 더움</string>
+    <string name="symp8">악몽</string>
+    <string name="symp9">아픔</string>
+
+    <!-- a week -->
+    <string name="not_at_all">not\nat all</string>
+    <string name="not_take">not\ntaking</string>
+    <string name="once_a_week">once\na week</string>
+    <string name="twice_a_week">twice\na week</string>
+    <string name="more_than_twice">>2 times\na week</string>
+
+    <!-- home -->
+    <string name="wake_up_at">We will wake up you at</string>
+    <string name="home_sleep_sound">SLEEP\nSOUND</string>
+
+    <!-- menu -->
+    <string name="menu">MENU</string>
+    <string name="store">STORE</string>
+    <string name="home">HOME</string>
+    <string name="sleep_sound">SLEEP SOUND</string>
+    <string name="device">DEVICE</string>
+    <string name="my_account">MY ACCOUNT</string>
+    <string name="lullaby">SLEEP SOUND</string>
+    <string name="diffuser">DIFFUSER</string>
+    <string name="alarm">ALARM</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="sleeing_pattern">SLEEP PATTERN</string>
+
+    <!-- analysis -->
+    <string name="today">TODAY</string>
+    <string name="monthly">MONTHLY</string>
+    <string name="total_sleep">TOTAL SLEEP</string>
+    <string name="deep_sleep">DEEP SLEEP</string>
+    <string name="light_sleep">LIGHT SLEEP</string>
+    <string name="awake">AWAKE</string>
+    <string name="sleep">SLEEP</string>
+    <string name="deep">DEEP</string>
+    <string name="most_favorite">MOST FAVORITE</string>
+    <string name="sleep_quaility">SLEEP QUALITY</string>
+    <string name="avg_sleep_quaility">AVG SLEEP QUALITY</string>
+    <string name="AVG">AVG</string>
+    <string name="LONGEST">LONGEST</string>
+    <string name="SHORTEST">SHORTEST</string>
+    <string name="sleep_time">SLEEP TIME</string>
+    <string name="one_hundred_percent">100%</string>
+    <string name="fifty">50</string>
+    <string name="zero">0</string>
+
+    <!-- diffuser scent -->
+    <string name="scent">SCENT</string>
+    <string name="peppermint">PEPPERMINT</string>
+
+    <!-- sleep sound -->
+    <string name="default_sound_title">DEFAULT SOUND TITLE</string>
+    <string name="rainy_day">RAINY DAY</string>
+    <string name="summer_night">SUMMER NIGHT</string>
+    <string name="silent_forest">SILENT FOREST</string>
+    <string name="afternoon_at_cafe">AFTERNOON AT CAFE</string>
+    <string name="ocean_wave">OCEAN WAVE</string>
+    <string name="train_trip">TRAIN TRIP</string>
+    <string name="water_brook">WATER BROOK</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="sleep_sound_time">SLEEP SOUND TIMER</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="select_sound">Please, select sleep sound</string>
+    <string name="ok">OK</string>
+    <string name="play_pause">Play /\nPause</string>
+    <string name="sleep_sound_n">Sleep\nSound</string>
+    <string name="sleep_sound_timer">Timer</string>
+
+    <!-- fragment -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- transition name-->
+    <string name="button_transition">buttonTransition</string>
+    <string name="alarm_start_time">alarmStartTime</string>
+    <string name="alarm_end_time">alarmEndTime</string>
+    <string name="alarm_to_sleep">alarmToSleep</string>
+
+
+</resources>

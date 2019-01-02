@@ -1,0 +1,162 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    android:orientation="vertical"
+    tools:context="themollo.app.mollo.survey.survey_fragment.Survey_p7">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/survey_7_text"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/flNotAtAll"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/ivNotAtAllCircle"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/gradient_button"
+                        android:visibility="visible"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/not_at_all"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flOnce"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/ivOnceCircle"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/gradient_button"
+                        android:visibility="gone"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/once_a_week"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flTwice"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/ivTwiceCircle"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/gradient_button"
+                        android:visibility="gone"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/twice_a_week"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flMore"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/ivMoreCircle"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/gradient_button"
+                        android:visibility="gone"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/more_than_twice"/>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvDone"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="@string/done"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

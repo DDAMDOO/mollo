@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_background_gradient"
+    tools:context="themollo.app.mollo.firebase.SignUpActivity">
+
+    <ImageView
+        android:layout_marginTop="39.5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="12.7dp"
+        android:layout_height="20.5dp" />
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="265dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/backgraound_copy" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:letterSpacing="0"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etUserNewName"
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_above="@id/etUserNewID"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/input_box"
+        android:paddingLeft="12dp"
+        android:hint="@string/full_name"
+        android:textColorHint="@color/white"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        app:fontName="OTFEB"/>
+
+    <EditText
+        android:id="@+id/etUserNewID"
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_above="@id/etUserNewPwd"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/input_box"
+        android:paddingLeft="12dp"
+        android:hint="@string/e_mail"
+        android:textColorHint="@color/white"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        app:fontName="OTFEB"/>
+
+    <EditText
+        android:id="@+id/etUserNewPwd"
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_above="@id/etUserNewPwdCheck"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/input_box"
+        android:paddingLeft="12dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/white"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        app:fontName="OTFEB"/>
+
+    <EditText
+        android:id="@+id/etUserNewPwdCheck"
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_above="@id/tvAgree"
+        android:layout_marginBottom="10.5dp"
+        android:background="@drawable/input_box"
+        android:paddingLeft="12dp"
+        android:hint="@string/password_confirm"
+        android:textColorHint="@color/white"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        app:fontName="OTFEB"/>
+
+    <TextView
+        android:id="@+id/tvAgree"
+        android:layout_width="274.5dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvRegister"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22.5dp"
+        android:letterSpacing="0.15"
+        android:text="@string/agree"
+        android:textColor="@color/white"
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48.5dp"
+        android:background="@drawable/register_button"
+        android:gravity="center"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="19.5sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llDrawer"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:background="@color/drawer_background_color"
+    android:orientation="vertical"
+    android:paddingLeft="39dp">
+
+    <LinearLayout
+        android:id="@+id/llStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="71dp">
+
+        <ImageView
+            android:layout_width="20.5dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icn_store"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="@string/store"
+            app:fontName="RoundB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp">
+
+        <ImageView
+            android:layout_width="20.5dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_alarm"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="@string/alarm"
+            app:fontName="RoundB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llLullaby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp">
+
+        <ImageView
+            android:layout_width="20.5dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icon_sleep_sound"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="@string/sleep_sound"
+            app:fontName="RoundB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSleepPattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp">
+
+        <ImageView
+            android:layout_width="20.5dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icn_sleep"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="@string/sleeing_pattern"
+            app:fontName="RoundB"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMyAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="35dp">
+
+        <ImageView
+            android:layout_width="20.5dp"
+            android:layout_height="19dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/icn_my_page"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:text="@string/my_account"
+            app:fontName="RoundB"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

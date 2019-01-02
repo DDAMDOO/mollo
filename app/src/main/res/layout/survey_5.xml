@@ -1,0 +1,373 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    android:orientation="vertical"
+    tools:context="themollo.app.mollo.survey.survey_fragment.Survey_p4">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/survey_5_text"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <FrameLayout
+                    android:id="@+id/flInsomnia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toLeftOf="@id/flSlouch"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/insomnia" />
+
+                    <ImageView
+                        android:id="@+id/ivInsomniaCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:text="@string/symp1"/>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flSlouch"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivSlouch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/slouch" />
+
+                    <ImageView
+                        android:id="@+id/ivSlouchCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:text="@string/symp2"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flBathroom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@id/flSlouch"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/bathroom" />
+
+                    <ImageView
+                        android:id="@+id/ivBathroomCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:text="@string/symp3"/>
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <FrameLayout
+                    android:id="@+id/flLung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toLeftOf="@id/flSneeze"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/lung" />
+
+                    <ImageView
+                        android:id="@+id/ivLungCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:text="@string/symp4"/>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flSneeze"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <ImageView
+                        android:id="@+id/ivSneeze"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/sneeze" />
+
+
+                    <ImageView
+                        android:id="@+id/ivSneezeCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="@string/symp5"
+                        android:textColor="#fff"
+                        android:gravity="center"
+                        android:textSize="15dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flStomach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@id/flSneeze"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/stomach" />
+
+
+                    <ImageView
+                        android:id="@+id/ivStomachCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:text="@string/symp9"/>
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="100dp">
+
+                <FrameLayout
+                    android:id="@+id/flCold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_toLeftOf="@id/flHot"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/toocold" />
+
+                    <ImageView
+                        android:id="@+id/ivColdCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:text="@string/symp6"/>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flHot"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginRight="75dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:id="@+id/ivHot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/toohot" />
+
+
+                    <ImageView
+                        android:id="@+id/ivHotCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:text="@string/symp7"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flEvil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_toRightOf="@id/flHot"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="top|center"
+                        android:src="@drawable/evil" />
+
+
+                    <ImageView
+                        android:id="@+id/ivEvilCircle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top|center"
+                        android:visibility="invisible"
+                        android:src="@drawable/gradient_button" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="#fff"
+                        android:textSize="15dp"
+                        android:gravity="center"
+                        android:text="@string/symp8"/>
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

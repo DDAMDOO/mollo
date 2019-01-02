@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="pendingIntentRequestCode">10001</integer>
+    <integer name="from_sleep_activity_request_code">1577</integer>
+
+</resources>

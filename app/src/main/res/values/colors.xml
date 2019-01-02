@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#391b67</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="appColor">#2B2C5D</color>
+    <color name="tutorialTextColor">#ffffff</color>
+    <color name="drawerBackground">#7A7BA5</color>
+    <color name="light_gray">#c2c7cc</color>
+    <color name="dark_gray">#3d454c</color>
+    <color name="dark_gray_pressed">#373e44</color>
+    <color name="darker_gray">#1f2226</color>
+    <color name="home_button_color">#4C4EA8</color>
+    <color name="alarm_progress_color">#4C4EA8</color>
+    <color name="white">#fff</color>
+    <color name="tab_not_selected">#4E4CAE</color>
+    <color name="tab_selected">#605FD8</color>
+    <color name="chart_fill_color">#8B8AFF</color>
+    <color name="moving_circle_color">#8B8AFF</color>
+    <color name="diffuser_scent_color">#8B8AFF</color>
+    <color name="facebook_button_color">#8b9dc3</color>
+    <color name="kakao_button_color">#fcd411</color>
+    <color name="sleep_fab_color">#8B8AFF</color>
+    <color name="black">#000000</color>
+
+    <!-- basement -->
+    <color name="base_background_start_color">#391b67</color>
+    <color name="base_background_end_color">#241042</color>
+    <color name="register_button_color">#c2a8fd</color>
+    <color name="survey_border_color">#979797</color>
+    <color name="survey_text_color">#381966</color>
+    <color name="page_text_color">#c2a8fd</color>
+    <color name="seekbar_progress_color">#c2a8fd</color>
+    <color name="seekbar_background_color">#d0c6df</color>
+    <color name="home_action_bar_color">#2f1f55</color>
+    <color name="home_circle_start_color">#2f1f55</color>
+    <color name="home_circle_end_color">#c2a8fd</color>
+    <color name="home_menu_button_color">#c2a8fd</color>
+    <color name="drawer_background_color">#29134a</color>
+    <color name="alarm_center_circle_start_color">#5a3ca1</color>
+    <color name="alarm_center_circle_end_color">#c2a8fd</color>
+    <color name="seekarc_progress_color">#7376ff</color>
+    <color name="button_select_color">#40aaaaaa</color>
+    <color name="radio_stroke_color">#6d5b89</color>
+    <color name="radio_click_color">#c2a8fd</color>
+
+</resources>

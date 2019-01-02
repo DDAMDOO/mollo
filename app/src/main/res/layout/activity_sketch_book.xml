@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    android:clipChildren="false"
+    tools:context=".util.SketchBook">
+
+    <RelativeLayout
+        android:id="@+id/rlTop"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <LinearLayout
+                android:id="@+id/llBack"
+                android:layout_width="80dp"
+                android:layout_height="80dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/left_white" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="@string/alarm"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlTop"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlSeekArcContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:clipChildren="false">
+
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="150dp"
+                android:clipChildren="false">
+
+                <themollo.app.mollo.util.MySeekArc
+                    android:id="@+id/saSleep"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:padding="20dp"
+                    app:arcColor="@color/alarm_progress_color"
+                    app:arcWidth="3dp"
+                    app:clockwise="true"
+                    app:max="720"
+                    app:progressColor="#fff"
+                    app:progressWidth="3dp"
+                    app:rotation="275"
+                    app:startAngle="0"
+                    app:sweepAngle="180"
+                    app:thumb="@drawable/seekarc_thumb"
+                    app:touchInside="false" />
+
+                <TextView
+                    android:id="@+id/tvFollowSleepTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:text="10:00"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="300dp"
+                android:layout_height="150dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:clipChildren="false">
+
+                <themollo.app.mollo.util.MySeekArc
+                    android:id="@+id/saWakeup"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:layout_gravity="bottom"
+                    android:padding="20dp"
+                    app:arcColor="#fff"
+                    app:arcWidth="3dp"
+                    app:clockwise="true"
+                    app:max="720"
+                    app:progressColor="@color/alarm_progress_color"
+                    app:progressWidth="3dp"
+                    app:rotation="95"
+                    app:startAngle="0"
+                    app:sweepAngle="180"
+                    app:thumb="@drawable/seekarc_thumb"
+                    app:touchInside="false" />
+
+                <TextView
+                    android:id="@+id/tvFollowWakeupTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="15dp"
+                    android:text="07:00"/>
+
+            </FrameLayout>
+
+
+
+            <ProgressBar
+                android:id="@+id/pbAlarmProgressBar"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_centerInParent="true" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlAlarmTime"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true">
+
+                <com.mbh.timelyview.TimelyView
+                    android:id="@+id/ttvTens"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+
+                <com.mbh.timelyview.TimelyView
+                    android:id="@+id/ttvUnits"
+                    android:layout_toRightOf="@id/ttvTens"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+
+                <com.mbh.timelyview.TimelyView
+                    android:id="@+id/timelyTextView"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentLeft="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:text="h"
+                    android:layout_toRightOf="@id/timelyTextView"/>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvUpperSeekArc"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llAlarm"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_centerInParent="true"
+        android:text="12313"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvLowerSeekArc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvUpperSeekArc"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:text="12313"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tvTotalSleepTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvLowerSeekArc"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:text="12313"
+        android:visibility="gone"/>
+
+
+
+    <ImageView
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/bottom_seaweed"/>
+
+    <TextView
+        android:id="@+id/tvSleepButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep"
+        android:textSize="50dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="100dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>
+

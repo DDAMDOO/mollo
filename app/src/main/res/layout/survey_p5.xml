@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_background_gradient"
+    tools:context="themollo.app.mollo.survey.survey_fragment.Survey_p5">
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87.5dp"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:lineSpacingExtra="6.5sp"
+        android:text="@string/survey_5_text"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingLeft="59dp"
+        android:paddingRight="59dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivsymp1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+        </LinearLayout>
+
+        <RadioButton
+            android:id="@+id/symp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp1"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp2"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp2"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp3"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp3"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp4"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp4"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp5"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp5"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp6"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp6"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp7"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp7"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp8"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp8"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+        <RadioButton
+            android:id="@+id/symp9"
+            android:layout_marginTop="12.5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/symp9"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:button="@drawable/radio_button"
+            android:paddingLeft="12dp"
+            app:fontName="RoundL"/>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

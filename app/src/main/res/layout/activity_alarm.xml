@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_background_gradient"
+    android:clipChildren="false"
+    tools:context="themollo.app.mollo.alarm.AlarmActivity">
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="265dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/backgraound_copy" />
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginLeft="11.75dp"
+        android:layout_marginTop="10.25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19.5dp"
+            android:text="@string/alarm"
+            android:textColor="@color/white"
+            android:textSize="14.5sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="76dp"
+        android:text="@string/you_can_sleep"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="187dp"
+        android:layout_height="187dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="192.5dp"
+        android:background="@drawable/alarm_center_circle">
+
+        <TextView
+            android:id="@+id/tvTotalSleepTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="102dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="41dp"
+            android:layout_height="29.5dp"
+            android:layout_marginLeft="20.5dp"
+            android:layout_marginTop="93.5dp"
+            android:gravity="center"
+            android:text="@string/for_"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontName="RoundR" />
+
+        <TextView
+            android:layout_width="41dp"
+            android:layout_height="29.5dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20.5dp"
+            android:layout_marginTop="93.5dp"
+            android:gravity="center"
+            android:text="@string/hour"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontName="RoundR" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="161dp"
+        android:layout_centerHorizontal="true"
+        android:clipChildren="false">
+
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="106.25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="106.25dp"
+            android:clipChildren="false">
+
+            <themollo.app.mollo.util.MySeekArc
+                android:id="@+id/saSleep"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:padding="20dp"
+                app:arcColor="@color/seekarc_progress_color"
+                app:arcWidth="4dp"
+                app:clockwise="true"
+                app:max="720"
+                app:progressColor="#fff"
+                app:progressWidth="4dp"
+                app:rotation="275"
+                app:startAngle="0"
+                app:sweepAngle="180"
+                app:thumb="@mipmap/oval"
+                app:touchInside="false" />
+
+            <TextView
+                android:id="@+id/tvFollowSleepTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:00"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="106.25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clipChildren="false">
+
+            <themollo.app.mollo.util.MySeekArc
+                android:id="@+id/saWakeup"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="bottom"
+                android:padding="20dp"
+                app:arcColor="#fff"
+                app:arcWidth="4dp"
+                app:clockwise="true"
+                app:max="720"
+                app:progressColor="@color/seekarc_progress_color"
+                app:progressWidth="4dp"
+                app:rotation="95"
+                app:startAngle="0"
+                app:sweepAngle="180"
+                app:thumb="@mipmap/oval"
+                app:touchInside="false" />
+
+            <TextView
+                android:id="@+id/tvFollowWakeupTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="07:00"
+                android:textColor="#fff"
+                android:textSize="15dp" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tvSleepButton"
+        android:layout_marginBottom="58dp"
+        android:textSize="15sp"
+        android:textColor="@color/white"
+        android:text="@string/dont_worry"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tvSleepButton"
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="48.5dp"
+        android:textColor="@color/white"
+        android:textSize="19.5sp"
+        android:text="@string/sleep"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@drawable/register_button"/>
+
+
+</RelativeLayout>

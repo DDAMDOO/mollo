@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:clipChildren="false"
+    tools:context=".sleeping.SleepActivity">
+
+    <com.felipecsl.gifimageview.library.GifImageView
+        android:id="@+id/gifBack"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:id="@+id/llCurContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:clipChildren="false"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlCurContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:clipChildren="false">
+
+
+            <ProgressBar
+                android:id="@+id/pbSleepProgressBar"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:layout_centerInParent="true" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlCurInfo"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true">
+
+                <com.mbh.timelyview.TimelyShortTimeView
+                    android:id="@+id/ttvCurTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7" />
+
+                <TextView
+                    android:id="@+id/tvCurSound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ttvCurTime"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="RAINY DAY"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llCurContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvAlarmText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm"
+                android:textColor="#fff"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tvAlarmText2"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/tvStartAlarmTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="22:00"
+                    android:textColor="#fff"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tvWave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_toRightOf="@id/tvStartAlarmTime"
+                    android:text="~"
+                    android:textColor="#fff"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tvEndAlarmTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tvWave"
+                    android:text="07:00"
+                    android:textColor="#fff"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="100dp"
+        android:text="Stop"
+        android:textColor="#fff"
+        android:textSize="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlPlayTime"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/rlSleepSound"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tvPlayTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/llPlayTime"
+            android:text="@string/sleep_sound_timer"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/llPlayTime"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ppb_round"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/alarm" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSleepSound"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/rlPlayPause"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tvSleepSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/llSleepSound"
+            android:text="@string/sleep_sound_n"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/llSleepSound"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ppb_round"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/lullaby" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPlayPause"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/llSoundBottom"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/tvPlayPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/llPlayPause"
+            android:text="@string/play_pause"
+            android:textColor="#fff"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/llPlayPause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ppb_round"
+            android:gravity="center">
+
+            <jp.co.recruit_lifestyle.android.widget.PlayPauseButton
+                android:id="@+id/ppbSound"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSoundBottom"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ppb_round"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivFabImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/lullaby" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

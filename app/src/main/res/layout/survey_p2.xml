@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="themollo.app.mollo.survey.survey_fragment.Survey_p2">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87.5dp"
+        android:letterSpacing="0"
+        android:text="@string/survey_2_text"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="274.5dp"
+        android:layout_height="53.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="27.5dp"
+        android:background="@drawable/input_box">
+
+        <LinearLayout
+            android:id="@+id/ll1020s"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/survey_button_left_round"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv1020s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/age1020s"
+                    android:textColor="@color/survey_text_color"
+                    android:textSize="21sp"
+                    app:fontName="RoundR"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ages"
+                    android:textSize="9.5sp"
+                    app:fontName="RoundR"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/survey_border_color" />
+
+        <LinearLayout
+            android:id="@+id/ll3040s"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv3040s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/age3040s"
+                    android:textColor="@color/survey_text_color"
+                    android:textSize="21sp"
+                    app:fontName="RoundR"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ages"
+                    android:textSize="9.5sp"
+                    app:fontName="RoundR"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/survey_border_color" />
+
+        <LinearLayout
+            android:id="@+id/ll50s"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/survey_button_right_round"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv50s"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text="@string/age50s"
+                    android:textColor="@color/survey_text_color"
+                    android:textSize="21sp"
+                    app:fontName="RoundR"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/overAges"
+                    android:textSize="9.5sp"
+                    app:fontName="RoundR"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

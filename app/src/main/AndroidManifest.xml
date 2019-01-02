@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="themollo.app.mollo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".util.MolloApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+
+        <!-- provider -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.file_provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+
+        <!-- receiver -->
+        <receiver android:name=".sleeping.AlarmReceiver">
+            <intent-filter>
+                <action android:name="themollo.app.mollo.alarm.AlarmStart" />
+            </intent-filter>
+        </receiver>
+
+        <!-- service -->
+        <service
+            android:name=".sleeping.SleepSoundService"
+            android:enabled="true" />
+
+        <!-- meta data -->
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"
+            tools:replace="android:value" />
+
+        <!-- activities -->
+        <activity android:name=".splash.SplashActivity" >
+
+        </activity>
+        <activity android:name=".sample.MainActivity" />
+        <activity android:name=".login.sns_login.LoginActivity"></activity>
+        <activity android:name=".sample.SensorActivity" />
+        <activity android:name=".firebase.SignInActivity" />
+        <activity android:name=".firebase.SignUpActivity">
+
+        </activity>
+        <activity android:name=".firebase.FindPwdActivity" />
+        <activity android:name=".survey.DoSurveyActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".sample.BackgroundSampleActivity" />
+        <activity android:name=".sample.NaviSampleActivity" />
+        <activity
+            android:name=".lullaby.LullabyActivity"
+            android:theme="@style/BaseAppTheme"></activity>
+        <activity android:name=".sample.CircularBarActivity" />
+        <activity android:name=".tutorial.TutorialActivity">
+
+        </activity>
+        <activity android:name=".alarm.AlarmActivity" >
+
+        </activity>
+        <activity
+            android:name=".home.HomeActivity"
+            android:theme="@style/BaseAppTheme">
+
+        </activity>
+        <activity
+            android:name=".util.SketchBook"
+            android:theme="@style/BaseAppTheme" />
+        <activity android:name=".account.MyAccountActivity" />
+        <activity android:name=".analysis.AnalysisActivity"></activity>
+        <activity android:name=".util.SketchBook2">
+
+        </activity>
+        <activity
+            android:name=".sample.AfterActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".sample.BeforeActivity"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".sleeping.SleepActivity"
+            android:theme="@style/SleepTheme"></activity>
+        <activity
+            android:name=".sleeping.SleepTimePopup"
+            android:theme="@style/PopupTheme" />
+        <activity android:name=".survey.SurveyResultPopup"
+            android:theme="@style/PopupTheme"/>
+    </application>
+
+</manifest>

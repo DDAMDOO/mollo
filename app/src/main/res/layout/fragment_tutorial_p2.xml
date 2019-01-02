@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="themollo.app.mollo.tutorial.tutorial_fragment.Tutorial_p2"
+    android:background="@color/appColor"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/alarm"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/ivIcon"
+        android:textColor="@color/tutorialTextColor"
+        android:text="@string/tutorial_2_text"
+        android:textSize="20dp"/>
+
+</RelativeLayout>
