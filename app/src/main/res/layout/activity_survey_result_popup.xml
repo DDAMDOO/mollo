@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="300dp"
     android:layout_height="360dp"
-    android:background="@color/appColor"
+    android:background="@drawable/popup_background"
     tools:context="themollo.app.mollo.survey.SurveyResultPopup">
 
     <LinearLayout
@@ -25,10 +25,10 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#aaa"
+        android:background="@color/popup_line_color"
         android:layout_below="@id/rlTop"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"/>
 
 
 
@@ -132,9 +132,9 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:background="#aaa"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:background="@color/popup_line_color"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         android:layout_above="@id/llConfirm"/>
 
     <LinearLayout

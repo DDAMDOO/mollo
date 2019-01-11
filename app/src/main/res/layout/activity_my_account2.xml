@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_background_gradient"
+    tools:context=".account.MyAccountActivity">
+
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="265dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/backgraound_copy" />
+
+
+    <ImageView
+        android:id="@+id/ivTopCircle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.4"
+        android:background="@drawable/home_top_circle"
+        android:scaleX="1.2" />
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginLeft="11.75dp"
+        android:layout_marginTop="10.25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="19.5dp"
+            android:text="@string/my_account"
+            android:textColor="@color/white"
+            android:textSize="14.5sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="85.5dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civAccount"
+            android:layout_width="126dp"
+            android:layout_height="126dp"
+            android:src="@mipmap/profile_pic" />
+
+        <ImageView
+            android:layout_width="38.5dp"
+            android:layout_height="38.5dp"
+            android:layout_gravity="right|bottom"
+            android:src="@mipmap/icn_camera" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/flAccount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17.5dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="USER NAME"/>
+
+
+    <ImageView
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:alpha="0.4"
+        android:background="@drawable/home_bottom_circle"
+        android:scaleX="1.2" />
+
+    <ImageView
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:alpha="0.4"
+        android:background="@drawable/home_bottom_circle_right"
+        android:scaleX="1.2" />
+
+
+    <ImageView
+        android:layout_width="238.5dp"
+        android:layout_height="56.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="43.5dp"
+        android:src="@drawable/back_star" />
+    
+    <View
+        android:id="@+id/bar1"
+        android:layout_marginTop="36dp"
+        android:layout_below="@id/ivTopCircle"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/account_bound_color"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginLeft="21.5dp"/>
+
+    <TextView
+        android:id="@+id/tvLoginType"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_below="@id/bar1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30.5dp"
+        android:text="Connect With"
+        android:textSize="18.5dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:fontName="RoundR"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civAccountState"
+        android:layout_toRightOf="@id/tvLoginType"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11.5dp"
+        android:layout_below="@id/bar1"
+        android:layout_width="24dp"
+        android:layout_height="24dp" />
+
+    <View
+        android:id="@+id/bar2"
+        android:layout_marginTop="46.5dp"
+        android:layout_below="@id/bar1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/account_bound_color"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginLeft="21.5dp"/>
+
+    <TextView
+        android:id="@+id/tvLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:layout_below="@id/bar2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30.5dp"
+        android:text="@string/log_out"
+        android:textSize="18.5dp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        app:fontName="RoundR"/>
+
+    <View
+        android:id="@+id/bar3"
+        android:layout_marginTop="46.5dp"
+        android:layout_below="@id/bar2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/account_bound_color"
+        android:layout_marginRight="21.5dp"
+        android:layout_marginLeft="21.5dp"/>
+
+</RelativeLayout>

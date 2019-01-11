@@ -15,7 +15,7 @@
     <color name="white">#fff</color>
     <color name="tab_not_selected">#4E4CAE</color>
     <color name="tab_selected">#605FD8</color>
-    <color name="chart_fill_color">#8B8AFF</color>
+    <color name="chart_fill_color">#c2a8fd</color>
     <color name="moving_circle_color">#8B8AFF</color>
     <color name="diffuser_scent_color">#8B8AFF</color>
     <color name="facebook_button_color">#8b9dc3</color>
@@ -27,6 +27,7 @@
     <color name="base_background_start_color">#391b67</color>
     <color name="base_background_end_color">#241042</color>
     <color name="register_button_color">#c2a8fd</color>
+    <color name="diffuser_button_color">#703dba</color>
     <color name="survey_border_color">#979797</color>
     <color name="survey_text_color">#381966</color>
     <color name="page_text_color">#c2a8fd</color>
@@ -40,8 +41,22 @@
     <color name="alarm_center_circle_start_color">#5a3ca1</color>
     <color name="alarm_center_circle_end_color">#c2a8fd</color>
     <color name="seekarc_progress_color">#7376ff</color>
-    <color name="button_select_color">#40aaaaaa</color>
+    <color name="button_select_color">#c2a8fd</color>
     <color name="radio_stroke_color">#6d5b89</color>
     <color name="radio_click_color">#c2a8fd</color>
+    <color name="account_bound_color">#979797</color>
+    <color name="diffuser_on_start_color">#c2a8fd</color>
+    <color name="diffuser_on_end_color">#747afb</color>
+    <color name="rain_start_color">#50e3c2</color>
+    <color name="rain_end_color">#5c8ffd</color>
+    <color name="ocean_start_color">#243e77</color>
+    <color name="ocean_end_color">#f76b1c</color>
+    <color name="train_start_color">#2f1f55</color>
+    <color name="train_end_color">#c2a8fd</color>
+    <color name="brook_start_color">#4cff97</color>
+    <color name="brook_end_color">#21936a</color>
+    <color name="fab_back">#7376ff</color>
+    <color name="popup_back_color">#c2a8fd</color>
+    <color name="popup_line_color">#9b83d4</color>
 
 </resources>

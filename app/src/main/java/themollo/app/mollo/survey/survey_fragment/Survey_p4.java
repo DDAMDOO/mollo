@@ -30,7 +30,7 @@ public class Survey_p4 extends FragUtilBasement implements FragmentLifeCycle {
     TextView tvHours;
 
     private String KEY = DEEP_SLEEP_TIME;
-    private static String VALUE = "";
+    private static String VALUE = "5";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

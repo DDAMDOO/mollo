@@ -31,7 +31,7 @@ public class Survey_p7 extends FragUtilBasement implements FragmentLifeCycle {
     TextView tvHours;
 
     private String KEY = ORDINARY_DAY_DISORDER;
-    private int VALUE = 0;
+    private int VALUE = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +39,7 @@ public class Survey_p7 extends FragUtilBasement implements FragmentLifeCycle {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.survey_p7, container, false);
         butterbind(view);
-
+        putSurveyDataPref(getActivity().getBaseContext(), KEY, VALUE+"");
         sbHours.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {

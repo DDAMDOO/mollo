@@ -72,7 +72,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:src="@drawable/gradient_button"
-                        android:visibility="visible" />
+                        android:visibility="gone"/>
 
 
                     <TextView
@@ -98,7 +98,7 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center"
                         android:src="@drawable/gradient_button"
-                        android:visibility="visible" />
+                        android:visibility="gone"/>
 
 
                     <TextView

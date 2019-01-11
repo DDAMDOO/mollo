@@ -40,9 +40,13 @@ public class BackPressController {
     }
 
     public void shutDown() {
-        if (Build.VERSION.SDK_INT >= 21)
-            activity.finishAndRemoveTask();
-        else activity.finish();
+        if (Build.VERSION.SDK_INT >= 21) {
+            activity.finishAffinity();
+        }
+        else {
+            activity.finishAffinity();
+//            activity.finish();
+        }
         System.exit(0);
     }
 }

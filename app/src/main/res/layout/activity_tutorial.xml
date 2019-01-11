@@ -1,23 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="themollo.app.mollo.tutorial.TutorialActivity">
+    android:background="@drawable/base_background_gradient"
+    tools:context="themollo.app.mollo.survey.DoSurveyActivity">
+
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="265dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/backgraound_copy" />
+
     <android.support.v4.view.ViewPager
         android:id="@+id/vpTutorial"
-        android:layout_weight="8"
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="match_parent"
+        android:layout_above="@id/rlPageNum"/>
 
-    <me.relex.circleindicator.CircleIndicator
-        android:id="@+id/ciIndicator"
-        android:layout_weight="2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@color/appColor"
-        android:gravity="center"/>
 
-</LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlPageNum"
+        android:layout_width="190dp"
+        android:layout_height="51.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="44.5dp">
+
+        <TextView
+            android:id="@+id/tvCurPageNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@id/tvSlash"
+            android:text="6"
+            android:textColor="@color/page_text_color"
+            android:textSize="15sp"
+            app:fontName="RoundL" />
+
+        <TextView
+            android:id="@+id/tvSlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="7.4sp"
+            android:layout_marginRight="7.4sp"
+            android:text="/"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontName="RoundL" />
+
+        <TextView
+            android:id="@+id/tvPageTotalNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/tvSlash"
+            android:text="5"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontName="RoundL" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llBack"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="59dp"
+        android:layout_marginLeft="27dp">
+
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="19dp"
+            android:layout_height="19.5dp"
+            android:rotation="180"
+            android:src="@mipmap/icn_white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llNext"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:gravity="center|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="59dp"
+        android:layout_marginRight="27dp">
+
+
+        <ImageView
+            android:id="@+id/ivNext"
+            android:layout_width="19dp"
+            android:layout_height="19.5dp"
+
+            android:src="@mipmap/icn_white" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvStart"
+        android:layout_width="79dp"
+        android:layout_height="31.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="59dp"
+        android:layout_marginRight="27dp"
+        android:background="@drawable/start_button"
+        android:gravity="center"
+        android:letterSpacing="-0.01"
+        android:text="@string/start"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

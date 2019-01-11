@@ -7,6 +7,28 @@
     android:background="@drawable/base_background_gradient"
     tools:context="themollo.app.mollo.firebase.SignInActivity">
 
+
+    <com.kakao.usermgmt.LoginButton
+        android:id="@+id/btKakaoLogin"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:layout_gravity="center">
+
+    </com.kakao.usermgmt.LoginButton>
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/btFacebook"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
     <ImageView
         android:layout_marginTop="39.5dp"
         android:layout_marginLeft="20dp"
@@ -22,6 +44,7 @@
         android:src="@mipmap/backgraound_copy" />
 
     <TextView
+        android:id="@+id/tvLoginSecret"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"

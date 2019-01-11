@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/base_background_gradient"
     tools:context="themollo.app.mollo.survey.survey_fragment.Survey_p5">
 
 
@@ -32,124 +31,210 @@
         android:paddingRight="59dp">
 
         <LinearLayout
+            android:id="@+id/llsymp1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-    //왜 넣었는지 모르는 버튼
-            <!--<ImageView-->
-                <!--android:id="@+id/ivsymp1"-->
-                <!--android:layout_width="20dp"-->
-                <!--android:layout_height="20dp"-->
-                <!--android:background="@drawable/radio_not_clicked"/>-->
+
+            <ImageView
+                android:id="@+id/ivsymp1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp1"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
 
         </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/symp1"
+        <LinearLayout
+            android:id="@+id/llsymp2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/symp1"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            />
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
-        <RadioButton
-            android:id="@+id/symp2"
-            android:layout_marginTop="12.5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/symp2"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+            <ImageView
+                android:id="@+id/ivsymp2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
 
-        <RadioButton
-            android:id="@+id/symp3"
-            android:layout_marginTop="12.5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/symp3"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp2"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
 
-        <RadioButton
-            android:id="@+id/symp4"
-            android:layout_marginTop="12.5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/symp4"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+        </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/symp5"
-            android:layout_marginTop="12.5dp"
+        <LinearLayout
+            android:id="@+id/llsymp3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/symp5"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
 
-        <RadioButton
-            android:id="@+id/symp6"
-            android:layout_marginTop="12.5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/symp6"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+            <ImageView
+                android:id="@+id/ivsymp3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
 
-        <RadioButton
-            android:id="@+id/symp7"
-            android:layout_marginTop="12.5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/symp7"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp3"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
 
-        <RadioButton
-            android:id="@+id/symp8"
-            android:layout_marginTop="12.5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/symp8"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+        </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/symp9"
-            android:layout_marginTop="12.5dp"
+        <LinearLayout
+            android:id="@+id/llsymp4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/symp9"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:button="@drawable/radio_button"
-            android:paddingLeft="12dp"
-            app:fontName="RoundL"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivsymp4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp4"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsymp5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivsymp5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp5"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsymp6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivsymp6"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp6"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsymp7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivsymp7"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp7"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsymp8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivsymp8"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp8"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llsymp9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:id="@+id/ivsymp9"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/radio_not_clicked"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symp9"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:layout_marginLeft="12dp"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 

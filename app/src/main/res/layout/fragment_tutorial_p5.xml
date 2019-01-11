@@ -2,36 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="themollo.app.mollo.tutorial.tutorial_fragment.Tutorial_p5"
-    android:background="@color/appColor">
-
-    <TextView
-        android:id="@+id/tvStart"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:textSize="20dp"
-        android:textColor="#fff"
-        android:text="START !"
-        android:gravity="center"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_margin="20dp"/>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="themollo.app.mollo.tutorial.tutorial_fragment.Tutorial_p5">
 
     <ImageView
         android:id="@+id/ivIcon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/chart"
-        android:layout_centerHorizontal="true"
-        android:layout_centerInParent="true"/>
+        android:layout_width="108.5dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="167dp"
+        android:src="@mipmap/icn_tutorual_analyze"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="126.5dp"
         android:gravity="center"
-        android:layout_below="@+id/ivIcon"
-        android:textColor="@color/tutorialTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="58.5dp"
+        android:textColor="@color/white"
         android:text="@string/tutorial_5_text"
-        android:textSize="20dp"/>
+        android:textSize="25.5dp"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

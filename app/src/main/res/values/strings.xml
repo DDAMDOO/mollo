@@ -10,9 +10,9 @@
 
     <!-- tutorial -->
     <string name="tutorial_1_text">Fill survey questions\nabout your sleep habit</string>
-    <string name="tutorial_2_text">Set alarm\nby adjusting circular bar</string>
+    <string name="tutorial_2_text">Connect Mollo Diffuser\nand spread your favorite scent</string>
     <string name="tutorial_3_text">Set lullaby\nfor your comfortable sleep</string>
-    <string name="tutorial_4_text">Connect Mollo Diffuser\nand spread your favorite scent</string>
+    <string name="tutorial_4_text">Set alarm\nby adjusting circular bar</string>
     <string name="tutorial_5_text">We analyze your sleep\nand offer solution</string>
 
     <!-- alarm -->
@@ -25,6 +25,7 @@
     <!-- login -->
     <string name="login">LOGIN</string>
     <string name="log_in">LOG IN</string>
+    <string name="log_out">Logout</string>
     <string name="kakao_login">Login with Kakao Account</string>
     <string name="facebook_login">Login with Facebook Account</string>
     <string name="email_login">LOGIN WITH E-MAIL</string>
@@ -107,12 +108,14 @@
     <string name="awake">AWAKE</string>
     <string name="sleep">SLEEP</string>
     <string name="deep">DEEP</string>
-    <string name="most_favorite">MOST FAVORITE</string>
+    <string name="most_favorite">MOST FAVORITE SCENT</string>
     <string name="sleep_quaility">SLEEP QUALITY</string>
     <string name="avg_sleep_quaility">AVG SLEEP QUALITY</string>
-    <string name="AVG">AVG</string>
+    <string name="avg_sleep_time">AVG SLEEP TIME</string>
     <string name="LONGEST">LONGEST</string>
+    <string name="longest_sleep_time">LONGEST SLEEP</string>
     <string name="SHORTEST">SHORTEST</string>
+    <string name="shortest_sleep_time">SHORTEST SLEEP</string>
     <string name="sleep_time">SLEEP TIME</string>
     <string name="one_hundred_percent">100%</string>
     <string name="fifty">50</string>
@@ -121,6 +124,10 @@
     <!-- diffuser scent -->
     <string name="scent">SCENT</string>
     <string name="peppermint">PEPPERMINT</string>
+    <string name="diffuser_scent">DIFFUSER SCENT</string>
+    <string name="diffuser_on">DIFFUSER ON</string>
+    <string name="device_on_need">DEVICE ON\nNEEDED!</string>
+
 
     <!-- sleep sound -->
     <string name="default_sound_title">DEFAULT SOUND TITLE</string>
@@ -133,7 +140,7 @@
     <string name="water_brook">WATER BROOK</string>
     <string name="confirm">CONFIRM</string>
     <string name="sleep_sound_time">SLEEP SOUND TIMER</string>
-    <string name="now_playing">Now Playing</string>
+    <string name="now_playing">NOW PLAYING</string>
     <string name="select_sound">Please, select sleep sound</string>
     <string name="ok">OK</string>
     <string name="play_pause">Play /\nPause</string>

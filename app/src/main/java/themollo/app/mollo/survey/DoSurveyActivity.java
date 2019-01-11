@@ -46,7 +46,7 @@ public class DoSurveyActivity extends AppUtilBasement {
 
     private SurveyPagerAdapter surveyPagerAdapter;
     private BackPressController backPressController;
-
+    private int curPageNum = 0;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -64,22 +64,7 @@ public class DoSurveyActivity extends AppUtilBasement {
 
         vpSurvey.setAdapter(surveyPagerAdapter);
         vpSurvey.setCurrentItem(0);
-        vpSurvey.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
 
 //        ciIndicator.setViewPager(vpSurvey);
 ////        ciIndicator.setBackgroundColor(R.color.appColor);
@@ -161,19 +146,17 @@ public class DoSurveyActivity extends AppUtilBasement {
 
     @Override
     public void setButtonListener() {
-        llBack.setOnClickListener(new View.OnClickListener(){
+        llBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int tag = (int) v.getTag();
-                vpSurvey.setCurrentItem(tag - 1);
+                vpSurvey.setCurrentItem(--curPageNum);
             }
         });
 
         llNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int tag = (int) v.getTag();
-                vpSurvey.setCurrentItem(tag + 1);
+                vpSurvey.setCurrentItem(++curPageNum);
             }
         });
 
@@ -189,4 +172,6 @@ public class DoSurveyActivity extends AppUtilBasement {
     public void butterBind() {
         ButterKnife.bind(this);
     }
+
+
 }

@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -34,6 +36,7 @@ import butterknife.ButterKnife;
 import themollo.app.mollo.R;
 import themollo.app.mollo.firebase.FirebaseLogin;
 import themollo.app.mollo.firebase.SignInActivity;
+import themollo.app.mollo.firebase.SignUpActivity;
 import themollo.app.mollo.survey.DoSurveyActivity;
 import themollo.app.mollo.util.BackPressController;
 
@@ -45,11 +48,26 @@ public class LoginActivity extends FirebaseLogin {
     private CallbackManager callbackManager;
     private BackPressController backPressController;
 
-    @BindView(R.id.btAnonySignIn)
-    Button btAnonySignIn;
+//    @BindView(R.id.btAnonySignIn)
+//    Button btAnonySignIn;
 
-    @BindView(R.id.btSignIn)
-    Button btSignIn;
+    @BindView(R.id.etUserEmail)
+    EditText etUserEmail;
+
+    @BindView(R.id.etUserPwd)
+    EditText etUserPwd;
+
+    @BindView(R.id.tvLoginSecret)
+    TextView tvLoginSecret;
+
+    @BindView(R.id.tvLogin)
+    TextView tvLogin;
+
+    @BindView(R.id.tvSignUp)
+    TextView tvSignUp;
+
+//    @BindView(R.id.btSignIn)
+//    Button btSignIn;
 
     @BindView(R.id.btFacebook)
     LoginButton btFacebook;
@@ -57,11 +75,11 @@ public class LoginActivity extends FirebaseLogin {
     @BindView(R.id.btKakaoLogin)
     com.kakao.usermgmt.LoginButton btKakaoLogin;
 
-    @BindView(R.id.llFacebookButton)
-    LinearLayout llFacebookButton;
+    @BindView(R.id.rlFacebook)
+    RelativeLayout rlFacebook;
 
-    @BindView(R.id.llKakaoButton)
-    LinearLayout llKakaoButton;
+    @BindView(R.id.rlKakao)
+    RelativeLayout rlKakao;
 
     @Override
     public void onBackPressed() {
@@ -94,7 +112,7 @@ public class LoginActivity extends FirebaseLogin {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(this.getApplicationContext());
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.sign_in);
         butterBind();
 
         backPressController = new BackPressController(this);
@@ -137,28 +155,45 @@ public class LoginActivity extends FirebaseLogin {
 
     @Override
     public void setButtonListener(){
-        btAnonySignIn.setOnClickListener(new View.OnClickListener() {
+
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                firebaseEmailSignIn(etUserEmail.getText().toString()
+                        , etUserPwd.getText().toString()
+                        , getBaseContext());
+            }
+        });
+
+        tvLoginSecret.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 firebaseAnonySignIn(getBaseContext());
             }
         });
 
-        btSignIn.setOnClickListener(new View.OnClickListener() {
+        tvSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                moveTo(SignInActivity.class);
+            public void onClick(View v) {
+                moveTo(SignUpActivity.class);
             }
         });
 
-        llFacebookButton.setOnClickListener(new View.OnClickListener() {
+//        btSignIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                moveTo(SignInActivity.class);
+//            }
+//        });
+
+        rlFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btFacebook.performClick();
             }
         });
 
-        llKakaoButton.setOnClickListener(new View.OnClickListener() {
+        rlKakao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 btKakaoLogin.performClick();

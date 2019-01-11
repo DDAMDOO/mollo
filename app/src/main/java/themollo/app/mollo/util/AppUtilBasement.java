@@ -63,6 +63,7 @@ public abstract class AppUtilBasement extends AppCompatActivity{
     public static final String ttOcean = "OCEAN WAVE";
     public static final String ttBrook = "WATER BROOK";
     public static final String ttForest = "SILENT FOREST";
+    public static final String PLAY_TYPE = "playType";
     public static final String GifURLRain = "https://media.giphy.com/media/d1G6qsjTJcHYhzxu/giphy.gif";
     public static final String GifURLTrain = "https://media.giphy.com/media/orTe0RcDVe5mN3V8Mw/giphy.gif";
     public static final String GifURLOcean = "https://media.giphy.com/media/oX9s5QZitp5xxyQlZf/giphy.gif";

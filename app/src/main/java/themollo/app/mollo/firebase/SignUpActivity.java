@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,8 +33,8 @@ public class SignUpActivity extends FirebaseLogin {
     EditText etUserNewID;
     @BindView(R.id.etUserNewPwdCheck)
     EditText etUserNewPwdCheck;
-    @BindView(R.id.llSignUp)
-    LinearLayout llSignUp;
+    @BindView(R.id.tvRegister)
+    TextView tvRegister;
     @BindView(R.id.llBack)
     LinearLayout llBack;
 
@@ -42,7 +44,7 @@ public class SignUpActivity extends FirebaseLogin {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.sign_up);
 
         butterBind();
         setButtonListener();
@@ -67,7 +69,7 @@ public class SignUpActivity extends FirebaseLogin {
     @Override
     public void setButtonListener() {
 
-        llSignUp.setOnClickListener(new View.OnClickListener() {
+        tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -96,6 +98,7 @@ public class SignUpActivity extends FirebaseLogin {
                 finish();
             }
         });
+
     }
 
     @Override

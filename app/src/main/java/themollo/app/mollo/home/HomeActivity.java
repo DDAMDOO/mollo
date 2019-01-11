@@ -36,8 +36,10 @@ import themollo.app.mollo.R;
 import themollo.app.mollo.alarm.AlarmActivity;
 import themollo.app.mollo.analysis.AnalysisActivity;
 import themollo.app.mollo.lullaby.LullabyActivity;
+import themollo.app.mollo.lullaby.SleepSoundActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 import themollo.app.mollo.util.BackPressController;
+import themollo.app.mollo.util.DiffuserPopup;
 import themollo.app.mollo.util.SketchBook;
 
 public class HomeActivity extends AppUtilBasement {
@@ -111,6 +113,8 @@ public class HomeActivity extends AppUtilBasement {
     @BindView(R.id.llDrawer)
     LinearLayout llDrawer;
 
+    @BindView(R.id.tvAlarmTime)
+    TextView tvAlarmTime;
 
     private DrawerArrow drawerArrow;
     private float drawerOffset;
@@ -120,17 +124,17 @@ public class HomeActivity extends AppUtilBasement {
 
     @Override
     protected void onResume() {
-        super.onResume();
 
 
 //        String sleepTime = getAlarmData(SLEEP_TIME);
-//        String wakeupTime = getAlarmData(WAKEUP_TIME);
-
+        String wakeupTime = getAlarmData(WAKEUP_TIME);
+        tvAlarmTime.setText(wakeupTime);
 //        tvStartAlarmTime.setText(sleepTime+"");
 //        tvEndAlarmTime.setText(wakeupTime+"");
 
 //        timer = new Timer();
 //        timer.scheduleAtFixedRate(getTimerTask(), 1500, 1500);
+        super.onResume();
     }
 
     @Override
@@ -215,7 +219,7 @@ public class HomeActivity extends AppUtilBasement {
             public void onDrawerSlide(View drawerView, float slideOffset) {
 
                 super.onDrawerSlide(drawerView, slideOffset);
-                float slideX = (float) (drawerView.getWidth() * (1.3) * slideOffset * (1.3));
+                float slideX = (float) (drawerView.getWidth() * (1.2) * slideOffset * (1.2));
                 rlContent.setTranslationX(slideX);
                 rlContent.setScaleY(1 - (slideOffset / scaleYFactor));
             }
@@ -228,6 +232,7 @@ public class HomeActivity extends AppUtilBasement {
     @OnClick({R.id.tvDiffuserButton})
     void moveToDevice() {
         //popup
+        moveTo(DiffuserPopup.class);
     }
 
     @OnClick(R.id.ivTopCircle)
@@ -257,11 +262,12 @@ public class HomeActivity extends AppUtilBasement {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
             options = ActivityOptions.makeSceneTransitionAnimation(this,
                     Pair.create(tvLullabyButton, transitionName));
-            Intent intent = new Intent(this, LullabyActivity.class);
+            Intent intent = new Intent(this, SleepSoundActivity.class);
             startActivity(intent, options.toBundle());
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         }else{
-            moveTo(LullabyActivity.class);
+//            moveTo(LullabyActivity.class);
+            moveTo(SleepSoundActivity.class);
         }
     }
 
@@ -303,14 +309,14 @@ public class HomeActivity extends AppUtilBasement {
         llAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                moveTo(SketchBook.class);
+                moveTo(AlarmActivity.class);
             }
         });
 
         llLullaby.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                moveTo(LullabyActivity.class);
+                moveTo(SleepSoundActivity.class);
             }
         });
 

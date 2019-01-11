@@ -21,6 +21,7 @@
             android:layout_height="265dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
+            android:alpha="0.43"
             android:src="@mipmap/backgraound_copy" />
 
         <ImageView
@@ -66,34 +67,15 @@
             android:layout_marginTop="10dp">
 
             <TextView
+                android:id="@+id/tvAlarmTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/tvTimeCenter"
-                android:text="12"
+                android:textSize="49.5dp"
                 android:textColor="@color/white"
-                android:textSize="49.5sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvTimeCenter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp"
-                android:text=":"
-                android:textColor="@color/white"
-                android:textSize="49.5sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/tvTimeCenter"
-                android:text="50"
-                android:textColor="@color/white"
-                android:textSize="49.5sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="12:12"
+                android:layout_centerHorizontal="true"/>
 
         </RelativeLayout>
 
@@ -112,35 +94,60 @@
 
         <TextView
             android:id="@+id/tvLullabyButton"
-            android:layout_width="109.5dp"
-            android:layout_height="109.5dp"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/ivTopCircle"
-            android:layout_marginRight="47dp"
-            android:layout_marginTop="-35dp"
-            android:background="@drawable/home_menu_button"
+            android:layout_width="269dp"
+            android:layout_height="55.5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/sleep_sound_button_background"
             android:gravity="center"
-            android:lineSpacingExtra="1.5sp"
-            android:text="@string/home_sleep_sound"
+            android:layout_above="@id/tvDiffuserButton"
+            android:text="@string/sleep_sound"
             android:textColor="@color/white"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12.5dp"/>
 
         <TextView
             android:id="@+id/tvDiffuserButton"
-            android:layout_width="109.5dp"
-            android:layout_height="109.5dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/ivTopCircle"
-            android:layout_marginLeft="64dp"
-            android:layout_marginTop="48dp"
-            android:background="@drawable/home_menu_button"
+            android:layout_width="269dp"
+            android:layout_height="55.5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/diffuser_button_background"
             android:gravity="center"
             android:lineSpacingExtra="1.5sp"
+            android:layout_marginBottom="131.5dp"
             android:text="@string/diffuser"
             android:textColor="@color/white"
-            android:textSize="15sp"
+            android:textSize="24sp"
             android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:scaleX="1.2"
+            android:alpha="0.4"
+            android:background="@drawable/home_bottom_circle"/>
+
+        <ImageView
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:scaleX="1.2"
+            android:alpha="0.4"
+            android:background="@drawable/home_bottom_circle_right"/>
+
+
+        <ImageView
+            android:layout_width="238.5dp"
+            android:layout_height="56.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="43.5dp"
+            android:src="@drawable/back_star"
+            />
 
     </RelativeLayout>
 
@@ -226,23 +233,23 @@
             android:id="@+id/llSleepPattern"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp">
 
             <ImageView
                 android:layout_width="20.5dp"
                 android:layout_height="19dp"
                 android:layout_gravity="center_vertical"
-                android:src="@mipmap/icn_sleep" />
+                android:src="@mipmap/icn_sleep"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
-                android:text="@string/sleeing_pattern"
-                android:textColor="#fff"
                 android:textSize="16sp"
-                app:fontName="RoundR" />
+                android:textColor="#fff"
+                android:text="@string/sleeing_pattern"
+                app:fontName="RoundR"/>
         </LinearLayout>
 
         <LinearLayout
@@ -267,8 +274,6 @@
                 android:text="@string/my_account"
                 app:fontName="RoundR"/>
         </LinearLayout>
-
-
 
 
     </LinearLayout>

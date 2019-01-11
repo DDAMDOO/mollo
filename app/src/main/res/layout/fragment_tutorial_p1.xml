@@ -2,24 +2,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="themollo.app.mollo.tutorial.tutorial_fragment.Tutorial_p1"
-    android:background="@color/appColor"
-    android:gravity="center">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="themollo.app.mollo.tutorial.tutorial_fragment.Tutorial_p1">
 
     <ImageView
         android:id="@+id/ivIcon"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/survey"
+        android:layout_width="74.5dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="172.5dp"
+        android:src="@mipmap/icn_tutorual_survey"
         android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="126.5dp"
         android:gravity="center"
-        android:layout_below="@+id/ivIcon"
-        android:textColor="@color/tutorialTextColor"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="58.5dp"
+        android:textColor="@color/white"
         android:text="@string/tutorial_1_text"
-        android:textSize="20dp"/>
+        android:textSize="25.5dp"
+        android:textStyle="bold"/>
 
 </RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <gradient
+        android:startColor="@color/brook_start_color"
+        android:endColor="@color/brook_end_color"
+        android:angle="270"/>
+
+    <corners
+        android:topRightRadius="360dp"
+        android:topLeftRadius="360dp"/>
+
+</shape>

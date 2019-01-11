@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="19.5dp"
-            android:text="@string/alarm"
+            android:text="@string/sleep"
             android:textColor="@color/white"
             android:textSize="14.5sp"
             android:textStyle="bold" />
@@ -55,50 +55,25 @@
         android:id="@+id/rlAlarmTime"
         android:layout_width="162dp"
         android:layout_height="134.5dp"
-        android:layout_below="@id/tvWakeUpAt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="65dp">
+        android:layout_marginTop="138.5dp">
 
         <TextView
-            android:id="@+id/tvHours"
+            android:id="@+id/tvAlarmTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toLeftOf="@id/tvTimeCenter"
-            android:layout_centerVertical="true"
-            android:text="12"
+            android:textSize="49.5dp"
             android:textColor="@color/white"
-            android:textSize="49.5sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvTimeCenter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:text=":"
-            android:textColor="@color/white"
-            android:textSize="49.5sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/tvMins"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/tvTimeCenter"
-            android:layout_centerVertical="true"
-            android:text="50"
-            android:textColor="@color/white"
-            android:textSize="49.5sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="136dp"
         android:layout_height="29.5dp"
-        android:layout_marginTop="167dp"
+        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true">
 
         <TextView
@@ -116,7 +91,7 @@
 
 
     <TextView
-        android:id="@+id/tvSleepButton"
+        android:id="@+id/tvWakeup"
         android:layout_width="274.5dp"
         android:layout_height="53.5dp"
         android:layout_alignParentBottom="true"
@@ -128,6 +103,123 @@
         android:gravity="center"
         android:textStyle="bold"
         android:background="@drawable/register_button"/>
+    
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="118dp"
+        android:background="@drawable/home_bottom_circle"
+        android:alpha="0.4"
+        android:layout_alignParentBottom="true"/>
+    
+    <ImageView
+        android:layout_width="238.5dp"
+        android:layout_height="56.5dp"
+        android:src="@drawable/back_star"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="57.5dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlPlayTime"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/rlSleepSound"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:id="@+id/llPlayTime"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/oval_white"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/btn_alarm" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSleepSound"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/rlPlayPause"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:id="@+id/llSleepSound"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oval_white"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@mipmap/btn_music" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlPlayPause"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_above="@id/llSoundBottom"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:id="@+id/llPlayPause"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/oval_white"
+            android:gravity="center">
+
+            <jp.co.recruit_lifestyle.android.widget.PlayPauseButton
+                android:id="@+id/ppbSound"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSoundBottom"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ppb_round"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivFabImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/lullaby" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>

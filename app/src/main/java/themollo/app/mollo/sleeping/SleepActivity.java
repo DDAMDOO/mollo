@@ -85,18 +85,18 @@ public class SleepActivity extends AppUtilBasement {
 
     @BindView(R.id.llPlayPause)
     LinearLayout llPlayPause;
-    
+
     @BindView(R.id.llPlayTime)
     LinearLayout llPlayTime;
 
-    @BindView(R.id.tvSleepSound)
-    TextView tvSleepSound;
-
-    @BindView(R.id.tvPlayPause)
-    TextView tvPlayPause;
-
-    @BindView(R.id.tvPlayTime)
-    TextView tvPlayTime;
+//    @BindView(R.id.tvSleepSound)
+//    TextView tvSleepSound;
+//
+//    @BindView(R.id.tvPlayPause)
+//    TextView tvPlayPause;
+//
+//    @BindView(R.id.tvPlayTime)
+//    TextView tvPlayTime;
 
     @BindView(R.id.rlSleepSound)
     RelativeLayout rlSleepSound;
@@ -106,12 +106,14 @@ public class SleepActivity extends AppUtilBasement {
 
     @BindView(R.id.rlPlayTime)
     RelativeLayout rlPlayTime;
-    
+
     @BindView(R.id.tvCurSound)
     TextView tvCurSound;
 
     @BindView(R.id.ivFabImage)
     ImageView ivFabImage;
+
+
 
     private Calendar calendar;
     private Drawable boot = new SleepingAnimator();
@@ -336,9 +338,9 @@ public class SleepActivity extends AppUtilBasement {
             llPlayPause.startAnimation(fabCloseAnim);
             llSleepSound.startAnimation(fabCloseAnim);
             llPlayTime.startAnimation(fabCloseAnim);
-            tvPlayPause.startAnimation(fabCloseAnim);
-            tvSleepSound.startAnimation(fabCloseAnim);
-            tvPlayTime.startAnimation(fabCloseAnim);
+//            tvPlayPause.startAnimation(fabCloseAnim);
+//            tvSleepSound.startAnimation(fabCloseAnim);
+//            tvPlayTime.startAnimation(fabCloseAnim);
             
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -361,9 +363,9 @@ public class SleepActivity extends AppUtilBasement {
             rlSleepSound.setVisibility(View.VISIBLE);
             rlPlayTime.setVisibility(View.VISIBLE);
 
-            tvPlayPause.startAnimation(fabOpenAnim);
-            tvSleepSound.startAnimation(fabOpenAnim);
-            tvPlayTime.startAnimation(fabOpenAnim);
+//            tvPlayPause.startAnimation(fabOpenAnim);
+//            tvSleepSound.startAnimation(fabOpenAnim);
+//            tvPlayTime.startAnimation(fabOpenAnim);
             llPlayPause.startAnimation(fabOpenAnim);
             llSleepSound.startAnimation(fabOpenAnim);
             llPlayTime.startAnimation(fabOpenAnim);

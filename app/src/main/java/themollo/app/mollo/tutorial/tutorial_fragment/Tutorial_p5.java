@@ -28,12 +28,6 @@ public class Tutorial_p5 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_tutorial_p5, container, false);
-        view.findViewById(R.id.tvStart).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getActivity().startActivity(new Intent(getContext(), LoginActivity.class));
-            }
-        });
         return view;
     }
 

@@ -33,9 +33,12 @@ public class AnalysisActivity extends AppUtilBasement {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_analysis);
+        setContentView(R.layout.activity_analysis2);
         butterBind();
         setButtonListener();
+
+        View tabView1 = getLayoutInflater().inflate(R.layout.tab_selected_background, null);
+        View tabView2 = getLayoutInflater().inflate(R.layout.tab_selected_background, null);
 
         vpAnalysis.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -45,10 +48,26 @@ public class AnalysisActivity extends AppUtilBasement {
         });
 
         TabLayout.Tab today = tlTab.newTab().setText("TODAY");
+
         tlTab.setSelectedTabIndicatorColor(getResources().getColor(R.color.appColor));
+        tlTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         tlTab.addTab(tlTab.newTab().setText(R.string.today));
         tlTab.addTab(tlTab.newTab().setText(R.string.monthly));
-
         tlTab.setTabGravity(TabLayout.GRAVITY_FILL);
 
 

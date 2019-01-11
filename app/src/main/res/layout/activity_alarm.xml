@@ -69,19 +69,33 @@
             android:gravity="center"
             android:text="9"
             android:textColor="@color/white"
-            android:textSize="102dp"
+            android:textSize="87.5dp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="41dp"
             android:layout_height="29.5dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20.5dp"
-            android:layout_marginTop="93.5dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@id/tvHourText"
+            android:layout_marginBottom="87.5dp"
+            android:text="@string/for_"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:fontName="RoundR" />
+
+        <TextView
+            android:id="@+id/tvHourText"
+            android:layout_width="41dp"
+            android:layout_height="29.5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22.5dp"
             android:gravity="center"
             android:text="@string/hour"
             android:textColor="@color/white"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            app:fontName="RoundR" />
 
     </RelativeLayout>
 

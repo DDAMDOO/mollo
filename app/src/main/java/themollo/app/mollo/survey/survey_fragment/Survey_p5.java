@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 
 import butterknife.BindView;
@@ -25,78 +26,70 @@ import themollo.app.mollo.survey.FragmentLifeCycle;
 import themollo.app.mollo.util.FragUtilBasement;
 
 public class Survey_p5 extends FragUtilBasement implements FragmentLifeCycle {
-
-//    @BindView(R.id.flInsomnia)
-//    FrameLayout flInsomnia;
-//    @BindView(R.id.ivInsomniaCircle)
-//    ImageView ivInsomniaCicle;
-//
-//    @BindView(R.id.flSlouch)
-//    FrameLayout flSlouch;
-//    @BindView(R.id.ivSlouchCircle)
-//    ImageView ivSlouchCicle;
-//
-//    @BindView(R.id.flBathroom)
-//    FrameLayout flBathroom;
-//    @BindView(R.id.ivBathroomCircle)
-//    ImageView ivBathroomCicle;
-//
-//    @BindView(R.id.flLung)
-//    FrameLayout flLung;
-//    @BindView(R.id.ivLungCircle)
-//    ImageView ivLungCicle;
-//
-//    @BindView(R.id.flSneeze)
-//    FrameLayout flSneeze;
-//    @BindView(R.id.ivSneezeCircle)
-//    ImageView ivSneezeCicle;
-//
-//    @BindView(R.id.flStomach)
-//    FrameLayout flStomach;
-//    @BindView(R.id.ivStomachCircle)
-//    ImageView ivStomachCicle;
-//
-//    @BindView(R.id.flCold)
-//    FrameLayout flCold;
-//    @BindView(R.id.ivColdCircle)
-//    ImageView ivColdCicle;
-//
-//    @BindView(R.id.flHot)
-//    FrameLayout flHot;
-//    @BindView(R.id.ivHotCircle)
-//    ImageView ivHotCicle;
-//
-//    @BindView(R.id.flEvil)
-//    FrameLayout flEvil;
-//    @BindView(R.id.ivEvilCircle)
-//    ImageView ivEvilCicle;
     
-    @BindView(R.id.symp1)
-    RadioButton symp1;
+    @BindView(R.id.llsymp1)
+    LinearLayout llsymp1;
 
-    @BindView(R.id.symp2)
-    RadioButton symp2;
+    @BindView(R.id.llsymp2)
+    LinearLayout llsymp2;
 
-    @BindView(R.id.symp3)
-    RadioButton symp3;
+    @BindView(R.id.llsymp3)
+    LinearLayout llsymp3;
 
-    @BindView(R.id.symp4)
-    RadioButton symp4;
+    @BindView(R.id.llsymp4)
+    LinearLayout llsymp4;
 
-    @BindView(R.id.symp5)
-    RadioButton symp5;
+    @BindView(R.id.llsymp5)
+    LinearLayout llsymp5;
 
-    @BindView(R.id.symp6)
-    RadioButton symp6;
+    @BindView(R.id.llsymp6)
+    LinearLayout llsymp6;
 
-    @BindView(R.id.symp7)
-    RadioButton symp7;
+    @BindView(R.id.llsymp7)
+    LinearLayout llsymp7;
 
-    @BindView(R.id.symp8)
-    RadioButton symp8;
+    @BindView(R.id.llsymp8)
+    LinearLayout llsymp8;
 
-    @BindView(R.id.symp9)
-    RadioButton symp9;
+    @BindView(R.id.llsymp9)
+    LinearLayout llsymp9;
+
+    @BindView(R.id.ivsymp1)
+    ImageView ivsymp1;
+
+    @BindView(R.id.ivsymp2)
+    ImageView ivsymp2;
+
+    @BindView(R.id.ivsymp3)
+    ImageView ivsymp3;
+
+    @BindView(R.id.ivsymp4)
+    ImageView ivsymp4;
+
+    @BindView(R.id.ivsymp5)
+    ImageView ivsymp5;
+
+    @BindView(R.id.ivsymp6)
+    ImageView ivsymp6;
+
+    @BindView(R.id.ivsymp7)
+    ImageView ivsymp7;
+
+    @BindView(R.id.ivsymp8)
+    ImageView ivsymp8;
+
+    @BindView(R.id.ivsymp9)
+    ImageView ivsymp9;
+
+    private boolean isClicked_symp1 = false;
+    private boolean isClicked_symp2 = false;
+    private boolean isClicked_symp3 = false;
+    private boolean isClicked_symp4 = false;
+    private boolean isClicked_symp5 = false;
+    private boolean isClicked_symp6 = false;
+    private boolean isClicked_symp7 = false;
+    private boolean isClicked_symp8 = false;
+    private boolean isClicked_symp9 = false;
 
     private String KEY = WHAT_DISTURB;
     private static int VALUE = 0;
@@ -107,29 +100,150 @@ public class Survey_p5 extends FragUtilBasement implements FragmentLifeCycle {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.survey_p5, container, false);
         butterbind(view);
-
-        setRadioValue(symp1);
-        setRadioValue(symp2);
-        setRadioValue(symp3);
-        setRadioValue(symp4);
-        setRadioValue(symp5);
-        setRadioValue(symp6);
-        setRadioValue(symp7);
-        setRadioValue(symp8);
-        setRadioValue(symp9);
-
-
-//        setButtonValue(flInsomnia, ivInsomniaCicle, getString(R.string.symp1));
-//        setButtonValue(flSlouch, ivSlouchCicle, getString(R.string.symp2));
-//        setButtonValue(flBathroom, ivBathroomCicle, getString(R.string.symp3));
-//        setButtonValue(flLung, ivLungCicle, getString(R.string.symp4));
-//        setButtonValue(flSneeze, ivSneezeCicle, getString(R.string.symp5));
-//        setButtonValue(flStomach, ivStomachCicle, getString(R.string.symp9));
-//        setButtonValue(flCold, ivColdCicle, getString(R.string.symp6));
-//        setButtonValue(flHot, ivHotCicle, getString(R.string.symp7));
-//        setButtonValue(flEvil, ivEvilCicle, getString(R.string.symp8));
+        
+        
+        setButtonValue();
 
         return view;
+    }
+    
+    public void setButtonValue(){
+
+        llsymp1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp1){
+                    ivsymp1.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp1 = false;
+                    --VALUE;
+                }else {
+                    ivsymp1.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp1 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp2){
+                    ivsymp2.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp2 = false;
+                    --VALUE;
+                }else {
+                    ivsymp2.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp2 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp3){
+                    ivsymp3.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp3 = false;
+                    --VALUE;
+                }else {
+                    ivsymp3.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp3 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp4){
+                    ivsymp4.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp4 = false;
+                    --VALUE;
+                }else {
+                    ivsymp4.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp4 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp5){
+                    ivsymp5.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp5 = false;
+                    --VALUE;
+                }else {
+                    ivsymp5.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp5 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp6){
+                    ivsymp6.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp6 = false;
+                    --VALUE;
+                }else {
+                    ivsymp6.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp6 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp7){
+                    ivsymp7.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp7 = false;
+                    --VALUE;
+                }else {
+                    ivsymp7.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp7 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp8){
+                    ivsymp8.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp8 = false;
+                    --VALUE;
+                }else {
+                    ivsymp8.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp8 = true;
+                    ++VALUE;
+                }
+            }
+        });
+
+        llsymp9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(isClicked_symp9){
+                    ivsymp9.setImageResource(R.drawable.radio_not_clicked);
+                    isClicked_symp9 = false;
+                    --VALUE;
+                }else {
+                    ivsymp9.setImageResource(R.drawable.radio_clicked);
+                    isClicked_symp9 = true;
+                    ++VALUE;
+                }
+            }
+        });
+        
     }
 
     public void setRadioValue(RadioButton r){
