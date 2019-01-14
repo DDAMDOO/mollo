@@ -94,6 +94,7 @@
     <string name="my_account">MY ACCOUNT</string>
     <string name="lullaby">SLEEP SOUND</string>
     <string name="diffuser">DIFFUSER</string>
+    <string name="diffuser_menu">DIFFUSER</string>
     <string name="alarm">ALARM</string>
     <string name="sign_in">SIGN IN</string>
     <string name="sign_up">SIGN UP</string>
@@ -124,6 +125,8 @@
     <!-- diffuser scent -->
     <string name="scent">SCENT</string>
     <string name="peppermint">PEPPERMINT</string>
+    <string name="chamomile">CHAMOMILE</string>
+    <string name="jasmine">JASMINE</string>
     <string name="diffuser_scent">DIFFUSER SCENT</string>
     <string name="diffuser_on">DIFFUSER ON</string>
     <string name="device_on_need">DEVICE ON\nNEEDED!</string>
@@ -156,5 +159,7 @@
     <string name="alarm_end_time">alarmEndTime</string>
     <string name="alarm_to_sleep">alarmToSleep</string>
 
-
+    <!--Diffuser Info-->
+    <string name ="diffuser_smell">들어간 향</string>
+    <string name="today_temporature">오늘의 온도/습도</string>
 </resources>

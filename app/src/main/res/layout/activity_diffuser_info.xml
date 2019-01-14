@@ -1,9 +1,387 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiffuserInfo">
+    android:orientation="vertical"
+    android:weightSum="5"
+    android:background="@drawable/base_background_gradient"
+    tools:context="themollo.app.mollo.analysis.MonthlyAnalysisFragment">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp">
+
+                <TextView
+                    android:id="@+id/secnt_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:gravity="center"
+                    android:text="@string/diffuser_smell"
+                    android:textColor="@color/red_btn_bg_color"
+                    android:textSize="10.5sp" />
+                <!--android:alpha="0.4"-->
+                <LinearLayout
+                    android:id="@+id/llScentContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/scent_frame1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.4"
+                            android:text="@string/peppermint"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/scent_frame1"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/scent1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="6.5dp"
+                                android:src="@mipmap/btn_music" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/scent_frame2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.4"
+                            android:text="@string/chamomile"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/scent_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/scent_frame2"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/scent2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="6.5dp"
+                                android:src="@mipmap/btn_music" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/scent_frame3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.4"
+                            android:text="@string/jasmine"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/scent_name3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/scent_frame3"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/scent3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="6.5dp"
+                                android:src="@mipmap/btn_music" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp">
+
+                <TextView
+                    android:id="@+id/temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:gravity="center"
+                    android:text="@string/today_temporature"
+                    android:textColor="@color/white"
+                    android:textSize="10.5sp" />
+                <!--android:alpha="0.4"-->
+                <LinearLayout
+                    android:id="@+id/temperatureContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="asdf"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+
+
+        <RelativeLayout
+            android:id="@+id/llRecommandScentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19.5dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp">
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+
+                    android:gravity="center"
+                    android:text="@string/diffuser_smell"
+                    android:textColor="@color/red_btn_bg_color"
+                    android:textSize="10.5sp" />
+                <!--android:alpha="0.4"-->
+                <LinearLayout
+                    android:id="@+id/llSleepHourContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/scent_frame1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.4"
+                            android:text="@string/peppermint"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/scent_frame1"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/scent1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="6.5dp"
+                                android:src="@mipmap/btn_music" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/scent_frame2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.4"
+                            android:text="@string/chamomile"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/scent_name2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/scent_frame2"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/scent2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="6.5dp"
+                                android:src="@mipmap/btn_music" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/scent_frame3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:alpha="0.4"
+                            android:text="@string/jasmine"
+                            android:textColor="#fff"
+                            android:textSize="12dp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/scent_name3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/scent_frame3"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/scent3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="39dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="6.5dp"
+                                android:src="@mipmap/btn_music" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

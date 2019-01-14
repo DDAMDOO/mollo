@@ -31,6 +31,7 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import themollo.app.mollo.DiffuserInfo;
 import themollo.app.mollo.account.MyAccountActivity;
 import themollo.app.mollo.R;
 import themollo.app.mollo.alarm.AlarmActivity;
@@ -89,8 +90,8 @@ public class HomeActivity extends AppUtilBasement {
     @BindView(R.id.llMyAccount)
     LinearLayout llAccount;
 
-    @BindView(R.id.llDiffuser)
-    LinearLayout llDiffuser;
+//    @BindView(R.id.llDiffuserMenu)
+//    LinearLayout llDiffuserMenu;
 
     @BindView(R.id.tvLullabyButton)
     TextView tvLullabyButton;
@@ -341,7 +342,13 @@ public class HomeActivity extends AppUtilBasement {
             }
         });
 
-
+//    //Diffuser Menu를 위한 버튼 이벤트
+//        llDiffuserMenu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                moveTo(DiffuserInfo.class);
+//            }
+//        });
     }
 
     @Override
