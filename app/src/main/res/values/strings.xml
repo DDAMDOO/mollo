@@ -161,5 +161,7 @@
 
     <!--Diffuser Info-->
     <string name ="diffuser_smell">들어간 향</string>
+    <string name="recomment_smell">오늘의 추천 향</string>
     <string name="today_temporature">오늘의 온도/습도</string>
+    <string name="diffuserOn">DIFFUSER ON</string>
 </resources>

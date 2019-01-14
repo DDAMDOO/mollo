@@ -42,7 +42,7 @@ public class DiffuserInfo extends AppCompatActivity {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        Temperature = "온도, 풍향, 풍량, 습도, 강수량\n"+contents_temp.text() + "\n";//+contents_other.text()+"\n";
+                        Temperature = "온도\t\t 풍향, 풍량\t\t 습도\t\t 강수량\n"+contents_temp.text() + "\n";//+contents_other.text()+"\n";
 
                         return null;
                     }
