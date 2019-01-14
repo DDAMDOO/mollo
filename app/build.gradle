@@ -126,7 +126,8 @@ dependencies {
     implementation 'com.github.recruit-lifestyle:PlayPauseButton:1.0'
 
     //jsoup parsing
-    implementation files('build/intermediates/rs/debug/lib/jsoup-1.11.3.jar')
+    //implementation files('build/intermediates/rs/debug/lib/jsoup-1.11.3.jar')
+    implementation 'org.jsoup:jsoup:1.11.3'
 }
 apply plugin: 'com.google.gms.google-services'
 

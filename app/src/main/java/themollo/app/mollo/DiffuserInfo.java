@@ -16,7 +16,8 @@ import java.io.IOException;
 public class DiffuserInfo extends AppCompatActivity {
     TextView textView; //결과를 띄어줄 TextView
     TextView reload; //reload버튼
-    Elements contents;
+    Elements contents_temp;
+    Elements contents_other;
     Document doc = null;
     String Temperature;//결과를 저장할 문자열변수
     @Override
@@ -35,11 +36,13 @@ public class DiffuserInfo extends AppCompatActivity {
                     protected Object doInBackground(Object[] params) {
                         try {
                             doc = Jsoup.connect("http://www.weather.go.kr/weather/forecast/timeseries.jsp").get(); //기상청 페이지 로딩
-                            contents = doc.select("dd.now_weather1_center.temp1.MB10");//셀렉터로 현재 날시를 가져옴
+                            contents_temp = doc.select("div.now_weather1");//셀렉터로 현재 날시를 가져옴
+                           // doc = Jsoup.connect("https://weather.naver.com/rgn/townWetr.nhn").get();
+                           // contents_other = doc.select("div.fl");//셀렉터로 현재 날시를 가져옴
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        Temperature = "현재날씨 = " + contents.text() + "\n";
+                        Temperature = "온도, 풍향, 풍량, 습도, 강수량\n"+contents_temp.text() + "\n";//+contents_other.text()+"\n";
 
                         return null;
                     }
