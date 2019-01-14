@@ -51,11 +51,13 @@
 
         <!-- activities -->
         <activity android:name=".splash.SplashActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".sample.MainActivity" />
         <activity android:name=".login.sns_login.LoginActivity" />
@@ -105,8 +107,10 @@
         <activity android:name=".lullaby.NowPlayingActivity" />
         <activity android:name=".lullaby.SleepSoundActivity" />
         <activity android:name=".sleeping.SleepingActivity" />
-        <activity android:name=".util.DiffuserPopup"
-            android:theme="@style/PopupTheme"/>
+        <activity
+            android:name=".util.DiffuserPopup"
+            android:theme="@style/PopupTheme" />
+        <activity android:name=".DiffuserInfo"></activity>
     </application>
 
 </manifest>
