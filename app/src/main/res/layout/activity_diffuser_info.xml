@@ -207,9 +207,15 @@
                     android:weightSum="3">
 
                     <TextView
+                        android:id="@+id/current_temp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:text="asdf"/>
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:text="오늘의 기온이나 습도가 들어가는 부분"
+                        />
 
 
                 </LinearLayout>
