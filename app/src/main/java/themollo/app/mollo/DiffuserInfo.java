@@ -64,6 +64,7 @@ public class DiffuserInfo extends AppCompatActivity {
         intent.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
                 Intent intent=new Intent(DiffuserInfo.this,DiffuserTime.class);
                 startActivity(intent);
             }

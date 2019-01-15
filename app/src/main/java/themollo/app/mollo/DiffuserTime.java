@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import themollo.app.mollo.R;
 import themollo.app.mollo.util.AppUtilBasement;
 
 public class DiffuserTime extends AppUtilBasement {

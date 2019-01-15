@@ -264,7 +264,8 @@ public class HomeActivity extends AppUtilBasement {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(HomeActivity.this, "'취소'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
-                        dialog.cancel();
+                        Intent intent = new Intent(HomeActivity.this, DiffuserPopup.class);
+                        startActivity(intent);
                     }
                 });
         AlertDialog dialog = builder.create();
