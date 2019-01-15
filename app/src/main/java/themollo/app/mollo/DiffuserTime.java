@@ -35,7 +35,7 @@ public class DiffuserTime extends AppUtilBasement {
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                VALUE = (float)progress/10+"";
+                VALUE = (float)progress+"";
                 sbVal.setText(VALUE);
             }
 

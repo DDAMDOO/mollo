@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Humming LAB</string>
+    <string name="app_name">Mollo</string>
     <string name="kakao_app_key">4422cf6abc2140ffaa1f80ba598862c8</string>
     <string name="facebook_app_id">662919707381310</string>
     <string name="app_name_2">Honey Sleep</string>
@@ -52,6 +52,7 @@
     <string name="overAges">대 이상</string>
     <string name="survey_3_text">지난 한달,\n평균 자는 시간은 몇 시간?</string>
     <string name="hours">시간</string>
+    <string name="min">mins</string>
     <string name="survey_4_text">그 중 숙면시간은?</string>
     <string name="survey_5_text">잠을 방해하는 요소 9가지 중\n해당하는 것을 고르세요</string>
     <string name="survey_6_text">잠을 돕는 약을\n얼마나 복용 중인가요?</string>

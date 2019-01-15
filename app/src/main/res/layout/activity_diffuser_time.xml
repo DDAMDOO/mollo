@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="269dp"
     android:layout_height="294.5dp"
-    android:background="@drawable/popup_background"
+    android:background="@drawable/popup_background_alpha"
     tools:context="themollo.app.mollo.util.DiffuserPopup">
 
     <TextView
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hours"
+                android:text="@string/min"
                 android:textColor="@color/white"
                 android:textSize="14.5sp" />
         </LinearLayout>
@@ -52,7 +52,7 @@
 
     <SeekBar
         android:id="@+id/seekBar1"
-        android:layout_width="match_parent"
+        android:layout_width="289dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/diffuser_time_sub"
         android:layout_alignParentBottom="true"
@@ -61,7 +61,7 @@
         android:layout_marginTop="62dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:max="200"
+        android:max="100"
         android:progress="50"
         android:progressDrawable="@drawable/seekbar_background"
         android:thumb="@mipmap/oval" />

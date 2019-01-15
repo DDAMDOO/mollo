@@ -57,6 +57,7 @@
     <color name="brook_end_color">#21936a</color>
     <color name="fab_back">#7376ff</color>
     <color name="popup_back_color">#c2a8fd</color>
+    <color name="popup_back_color1">#e2d5ff</color>
     <color name="popup_line_color">#9b83d4</color>
 
 </resources>
