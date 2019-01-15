@@ -1,7 +1,9 @@
 package themollo.app.mollo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +37,9 @@ public class DiffuserTime extends AppUtilBasement {
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                VALUE = (float)progress+"";
+                VALUE = (progress)*20+"";
                 sbVal.setText(VALUE);
+                Log.d("TAG", "" + VALUE);
             }
 
             @Override
@@ -56,7 +59,8 @@ public class DiffuserTime extends AppUtilBasement {
         tvOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(DiffuserTime.this, TimerActivity.class);
+                startActivity(intent);
             }
         });
     }

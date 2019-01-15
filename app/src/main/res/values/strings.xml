@@ -165,6 +165,7 @@
     <string name="recomment_smell">오늘의 추천 향</string>
     <string name="today_temporature">오늘의 온도/습도</string>
     <string name="diffuserOn">DIFFUSER ON</string>
+    <string name="init_diffuser_min">20</string>
 
     <!--Diffuser Time-->
     <string name="diffuser_time">DIFFUSER TIME</string>

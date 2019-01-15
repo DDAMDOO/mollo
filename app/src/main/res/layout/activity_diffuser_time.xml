@@ -39,7 +39,7 @@
                 android:id="@+id/sbValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5" />
+                android:text="@string/init_diffuser_min" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -61,8 +61,8 @@
         android:layout_marginTop="62dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:max="100"
-        android:progress="50"
+        android:max="3"
+        android:progress="1"
         android:progressDrawable="@drawable/seekbar_background"
         android:thumb="@mipmap/oval" />
 
