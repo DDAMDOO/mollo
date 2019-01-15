@@ -1,5 +1,6 @@
 package themollo.app.mollo;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ public class DiffuserInfo extends AppCompatActivity {
     Elements contents_other;
     Document doc = null;
     String Temperature;//결과를 저장할 문자열변수
+    TextView intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +56,16 @@ public class DiffuserInfo extends AppCompatActivity {
                         textView.setText(Temperature);
                     }
                 }.execute();
+
+            }
+        });
+        //diffuser 시간 정하는 popup으로 이동
+        intent = findViewById(R.id.tvDiffuserOn);
+        intent.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(DiffuserInfo.this,DiffuserTime.class);
+                startActivity(intent);
             }
         });
     }

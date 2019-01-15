@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="themollo.app.mollo.sample.MainActivity">
+
+    <Button
+        android:id="@+id/btLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logout"/>
+
+    <Button
+        android:id="@+id/btSensor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sensor"/>
+
+    <Button
+        android:id="@+id/btHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="background sample"/>
+
+    <Button
+        android:id="@+id/btNavi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="navigation drawer"/>
+
+    <Button
+        android:id="@+id/btLullabyPlayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lullaby"/>
+
+    <Button
+        android:id="@+id/btCircularBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="seekarc"/>
+
+    <Button
+        android:id="@+id/btAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alarm"/>
+
+
+</LinearLayout>

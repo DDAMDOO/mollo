@@ -110,7 +110,8 @@
         <activity
             android:name=".util.DiffuserPopup"
             android:theme="@style/PopupTheme" />
-        <activity android:name=".DiffuserInfo"></activity>
+        <activity android:name=".DiffuserInfo" />
+        <activity android:name=".DiffuserTime"></activity>
     </application>
 
 </manifest>

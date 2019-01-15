@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="269dp"
+    android:layout_height="294.5dp"
+    android:background="@drawable/popup_background"
+    tools:context="themollo.app.mollo.util.DiffuserPopup">
+
+    <TextView
+        android:id="@+id/DiffuserTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26.5dp"
+        android:layout_alignParentTop="true"
+        android:lineSpacingExtra="3sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/diffuser_time"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_marginLeft="23.5dp"
+        android:layout_marginRight="23.5dp"
+        android:background="@color/popup_line_color"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="74.5dp"/>
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_below="@id/DiffuserTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:progress="50"
+        android:thumb="@drawable/ic_launcher" />
+    <TextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26.5dp"
+        android:layout_alignParentBottom="true"
+        android:lineSpacingExtra="3sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ok"/>
+
+</RelativeLayout>

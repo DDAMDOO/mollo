@@ -9,24 +9,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.os.Bundle;
 import android.transition.ChangeBounds;
-import android.transition.Fade;
 import android.util.Pair;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.felipecsl.gifimageview.library.GifImageView;
-import com.mbh.timelyview.TimelyShortTimeView;
-
-import java.util.Date;
 import java.util.Timer;
-import java.util.TimerTask;
 
-import butterknife.BindColor;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,12 +28,9 @@ import themollo.app.mollo.account.MyAccountActivity;
 import themollo.app.mollo.R;
 import themollo.app.mollo.alarm.AlarmActivity;
 import themollo.app.mollo.analysis.AnalysisActivity;
-import themollo.app.mollo.lullaby.LullabyActivity;
 import themollo.app.mollo.lullaby.SleepSoundActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 import themollo.app.mollo.util.BackPressController;
-import themollo.app.mollo.util.DiffuserPopup;
-import themollo.app.mollo.util.SketchBook;
 
 public class HomeActivity extends AppUtilBasement {
 
@@ -126,6 +115,10 @@ public class HomeActivity extends AppUtilBasement {
     private BackPressController backPressController;
     private Timer timer;
 
+    public void moveTo(Class cls){
+        startActivity(new Intent(getBaseContext(), cls));
+    }
+
     @Override
     protected void onResume() {
 
@@ -181,7 +174,7 @@ public class HomeActivity extends AppUtilBasement {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.temp);
+        setContentView(R.layout.activity_main);
         butterBind();
         setButtonListener();
 
