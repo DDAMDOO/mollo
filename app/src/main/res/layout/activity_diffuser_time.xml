@@ -20,19 +20,20 @@
         android:textSize="29sp"
         android:textStyle="bold" />
 
-
-
     <RelativeLayout
+        android:id="@+id/valueContainer"
         android:layout_width="289dp"
         android:layout_height="wrap_content"
-        android:layout_above="@id/seekBar1"
-        android:layout_marginRight="20dp"
-        android:layout_centerHorizontal="true">
+        android:layout_below="@id/diffuser_time_sub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true">
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp">
 
             <TextView
                 android:id="@+id/sbValue"
@@ -57,6 +58,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="62dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:max="200"
         android:progress="50"
         android:progressDrawable="@drawable/seekbar_background"

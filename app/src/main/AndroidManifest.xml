@@ -52,12 +52,12 @@
         <!-- activities -->
         <activity android:name=".splash.SplashActivity">
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
+             <!--<intent-filter>-->
+             <!--<action android:name="android.intent.action.MAIN" />-->
 
 
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+             <!--<category android:name="android.intent.category.LAUNCHER" />-->
+             <!--</intent-filter>-->
         </activity>
         <activity android:name=".sample.MainActivity" />
         <activity android:name=".login.sns_login.LoginActivity" />
@@ -77,11 +77,11 @@
         <activity
             android:name=".home.HomeActivity"
             android:theme="@style/BaseAppTheme">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".util.SketchBook"
@@ -113,7 +113,7 @@
         <activity android:name=".DiffuserInfo" />
         <activity
             android:name=".DiffuserTime"
-            android:theme="@style/PopupTheme" />
+            android:theme="@style/PopupTheme"/>
     </application>
 
 </manifest>

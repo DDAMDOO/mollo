@@ -270,7 +270,7 @@ public class HomeActivity extends AppUtilBasement {
                 });
         AlertDialog dialog = builder.create();
         //dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.base_background_gradient));
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 120, 120, 120)));
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
         dialog.show();
     }
 

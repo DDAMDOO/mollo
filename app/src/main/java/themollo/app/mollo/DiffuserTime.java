@@ -25,12 +25,13 @@ public class DiffuserTime extends AppUtilBasement {
 
     private static String VALUE = "5";
 
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.activity_diffuser_time, container, false);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_diffuser_time);
         butterBind();
-
+        setButtonListener();
         sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -48,21 +49,7 @@ public class DiffuserTime extends AppUtilBasement {
 
             }
         });
-
-
-
-        return view;
     }
-
-
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        setContentView(R.layout.activity_diffuser_time);
-//        butterBind();
-//        setButtonListener();
-//    }
 
     @Override
     public void setButtonListener() {
