@@ -1,10 +1,14 @@
 package themollo.app.mollo.home;
 
 import android.app.ActivityOptions;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.os.Bundle;
@@ -16,6 +20,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.Timer;
 
@@ -24,6 +31,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import themollo.app.mollo.DiffuserInfo;
+import themollo.app.mollo.DiffuserTime;
 import themollo.app.mollo.account.MyAccountActivity;
 import themollo.app.mollo.R;
 import themollo.app.mollo.alarm.AlarmActivity;
@@ -31,6 +39,7 @@ import themollo.app.mollo.analysis.AnalysisActivity;
 import themollo.app.mollo.lullaby.SleepSoundActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 import themollo.app.mollo.util.BackPressController;
+import themollo.app.mollo.util.DiffuserPopup;
 
 public class HomeActivity extends AppUtilBasement {
 
@@ -228,13 +237,43 @@ public class HomeActivity extends AppUtilBasement {
 
     @OnClick({R.id.tvDiffuserButton})
     void moveToDevice() {
+
+        show();
+
         //popup
         //추가부분 device 가 연결되어있는지 유무를 판단하여 연결되있을 경우 디퓨저 설정 액티비티로 넘어가고 그렇지 않은 경우 DiffuserPopup을 띄워줌
-        moveTo(DiffuserInfo.class);
+        //moveTo(DiffuserInfo.class);
 
         //아직 장치 연결이 안되서 일단은 주석
         //moveTo(DiffuserPopup.class);
     }
+
+    void show(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("연결 확인")
+                .setMessage("기기와 연결되어있습니까?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(HomeActivity.this, "'확인'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(HomeActivity.this, DiffuserInfo.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(HomeActivity.this, "'취소'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        //dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.base_background_gradient));
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 120, 120, 120)));
+        dialog.show();
+    }
+
+
 
     @OnClick(R.id.ivTopCircle)
     void moveToAlarmAnim() {
