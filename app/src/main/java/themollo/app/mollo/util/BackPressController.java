@@ -30,7 +30,6 @@ public class BackPressController {
             toast.cancel();
         }
     }
-
     public Boolean is2sPassed() {
             return System.currentTimeMillis() > backKeyPressedTime + 2000;
     }

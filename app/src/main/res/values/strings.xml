@@ -169,4 +169,11 @@
 
     <!--Diffuser Time-->
     <string name="diffuser_time">DIFFUSER TIME</string>
+    <string name="diffuser_timer">타이머</string>
+    <string name="remain_time">남은 시간</string>
+
+    <!--last activity-->
+    <string name="home_btn">홈으로</string>
+    <string name="bye">디퓨저가 종료되었습니다.</string>
+
 </resources>
