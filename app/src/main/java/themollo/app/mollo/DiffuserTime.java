@@ -60,6 +60,7 @@ public class DiffuserTime extends AppUtilBasement {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(DiffuserTime.this, TimerActivity.class);
+                intent.putExtra("countdown_val",VALUE);
                 startActivity(intent);
             }
         });

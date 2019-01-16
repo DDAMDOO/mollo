@@ -77,11 +77,11 @@
         <activity
             android:name=".home.HomeActivity"
             android:theme="@style/BaseAppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".util.SketchBook"
@@ -110,7 +110,13 @@
         <activity
             android:name=".util.DiffuserPopup"
             android:theme="@style/PopupTheme" />
-        <activity android:name=".DiffuserInfo" />
+        <activity android:name=".DiffuserInfo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".DiffuserTime"
             android:theme="@style/PopupTheme" />

@@ -26,14 +26,18 @@ public class TimerActivity extends Activity {
         setContentView(R.layout.activity_timer);
         mText=(TextView)findViewById(R.id.txt);
 
+        Intent intent = new Intent(this.getIntent());
+        int countdownText = intent.getIntExtra("countdown_val",1);
         // 핸들러를 사용하지 않고도 일정시간마다 (혹은 후에) 코스를 수행할수 있도록
         // CountDownTimer 클래스가 제공된다.
         // '총시간'  과 '인터벌(간격)' 을 주면 매 간격마다 onTick 메소드를 수행한다.
-        new CountDownTimer(10 * 1000, 1000){
+        new CountDownTimer(countdownText*20 * 1000, 1000){
 
             @Override
             public void onTick(long millisUntilFinished) { // 총 시간과 주기
                 value++;
+                Log.d("time value",String.valueOf(value));
+                Log.d("countdown value",String.valueOf(countdownText));
                 mText.setText("Value=" + value);
             }
 
