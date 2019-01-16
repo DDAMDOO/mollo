@@ -1,11 +1,14 @@
 package themollo.app.mollo;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -13,26 +16,54 @@ import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class TimerActivity extends AppCompatActivity {
+public class TimerActivity extends Activity {
 
-    long now = System.currentTimeMillis();
-    // 현재시간을 date 변수에 저장한다.
-    Date date = new Date(now);
-    // 시간을 나타냇 포맷을 정한다 ( yyyy/MM/dd 같은 형태로 변형 가능 )
-    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-    // nowDate 변수에 값을 저장한다.
-    String formatDate = sdfNow.format(date);
+    int value=0;
+    TextView mText;
 
-    TextView dateNow;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+        mText=(TextView)findViewById(R.id.txt);
 
-        dateNow = (TextView) findViewById(R.id.txt);
-        dateNow.setText(formatDate);    // TextView 에 현재 시간 문자열 할당
+        // 핸들러를 사용하지 않고도 일정시간마다 (혹은 후에) 코스를 수행할수 있도록
+        // CountDownTimer 클래스가 제공된다.
+        // '총시간'  과 '인터벌(간격)' 을 주면 매 간격마다 onTick 메소드를 수행한다.
+        new CountDownTimer(10 * 1000, 1000){
+
+            @Override
+            public void onTick(long millisUntilFinished) { // 총 시간과 주기
+                value++;
+                mText.setText("Value=" + value);
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();  // 타이머 시작
     }
+
+
+//    현재 시간 나타내주는 코드. 새로고침 안됨
+//    long now = System.currentTimeMillis();
+//    // 현재시간을 date 변수에 저장한다.
+//    Date date = new Date(now);
+//    // 시간을 나타냇 포맷을 정한다 ( yyyy/MM/dd 같은 형태로 변형 가능 )
+//    SimpleDateFormat sdfNow = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+//    // nowDate 변수에 값을 저장한다.
+//    String formatDate = sdfNow.format(date);
+//
+//    TextView dateNow;
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_timer);
+//
+//        dateNow = (TextView) findViewById(R.id.txt);
+//        dateNow.setText(formatDate);    // TextView 에 현재 시간 문자열 할당
+//    }
 
 //    long IAvailableDate;
 //    long ILeaveDay;
