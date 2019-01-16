@@ -36,13 +36,16 @@ public class TimerActivity extends Activity {
         // 핸들러를 사용하지 않고도 일정시간마다 (혹은 후에) 코스를 수행할수 있도록
         // CountDownTimer 클래스가 제공된다.
         // '총시간'  과 '인터벌(간격)' 을 주면 매 간격마다 onTick 메소드를 수행한다.
-        new CountDownTimer(cd_val*100, 1000){
-
+        new CountDownTimer(cd_val*1000*60, 1000){
+            int result = cd_val*60;
             @Override
             public void onTick(long millisUntilFinished) { // 총 시간과 주기
-                value++;
-                int result = cd_val-value;
-                mText.setText("Value=" + result);
+                Log.d("valueofcd",result+"");
+                result--;
+                int hour = result/3600;
+                int min = (result-hour)/60;
+                int sec = result%60;
+                mText.setText(hour+":"+min+":"+sec);
             }
 
             @Override
