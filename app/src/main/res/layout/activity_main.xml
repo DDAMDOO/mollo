@@ -287,6 +287,29 @@
                 app:fontName="RoundR"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/llDiffuserMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="35dp">
+
+            <ImageView
+                android:layout_width="20.5dp"
+                android:layout_height="19dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/icn_my_page"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:text="@string/diffuser_menu"
+                app:fontName="RoundR"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 

@@ -88,8 +88,8 @@ public class HomeActivity extends AppUtilBasement {
     @BindView(R.id.llMyAccount)
     LinearLayout llAccount;
 
-//    @BindView(R.id.llDiffuserMenu)
-//    LinearLayout llDiffuserMenu;
+    @BindView(R.id.llDiffuserMenu)
+    LinearLayout llDiffuserMenu;
 
     @BindView(R.id.tvLullabyButton)
     TextView tvLullabyButton;
@@ -239,13 +239,6 @@ public class HomeActivity extends AppUtilBasement {
     void moveToDevice() {
 
         show();
-
-        //popup
-        //추가부분 device 가 연결되어있는지 유무를 판단하여 연결되있을 경우 디퓨저 설정 액티비티로 넘어가고 그렇지 않은 경우 DiffuserPopup을 띄워줌
-        //moveTo(DiffuserInfo.class);
-
-        //아직 장치 연결이 안되서 일단은 주석
-        //moveTo(DiffuserPopup.class);
     }
 
     void show(){
@@ -376,12 +369,10 @@ public class HomeActivity extends AppUtilBasement {
         });
 
 //    //Diffuser Menu를 위한 버튼 이벤트
-//        llDiffuserMenu.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                moveTo(DiffuserInfo.class);
-//            }
-//        });
+        llDiffuserMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { moveTo(DiffuserInfo.class); }
+        });
     }
 
     @Override
