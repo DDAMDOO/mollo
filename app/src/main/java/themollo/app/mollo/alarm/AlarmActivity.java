@@ -336,7 +336,6 @@ public class AlarmActivity extends AppUtilBasement{
         tvFollowWakeupTime.setTranslationX(bottomThumbXPos);
         tvFollowWakeupTime.setTranslationY(bottomThumbYPos);
 
-
     }
 
 //    private AlarmManager alarmManager;
