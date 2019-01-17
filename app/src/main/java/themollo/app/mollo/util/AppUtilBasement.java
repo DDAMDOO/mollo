@@ -82,11 +82,15 @@ public abstract class AppUtilBasement extends AppCompatActivity{
     public static final String DRUG_FOR_SLEEP = "drugforsleep";
     public static final String ORDINARY_DAY_DISORDER = "ordinarydaydisorder";
 
-
-    public AlarmManager alarmManager;
+    //여기 지움 - 안되면 살려요
+    //public AlarmManager alarmManager;
 
     public int toInt(String s) {
-        return Integer.parseInt(s);
+        if(!"".equals(s)){ //만약 받아온 데이터가 공백이 아니면 데이터를 형변환 하여 적재
+            return Integer.parseInt(s);
+        }
+        else
+            return 0;
     }
 
     public float toFloat(String s){
@@ -180,6 +184,7 @@ public abstract class AppUtilBasement extends AppCompatActivity{
     }
 
     public String getAlarmData(String key){
+
         return getAlarmPref().getString(key, "");
     }
 
