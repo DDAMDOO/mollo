@@ -335,7 +335,7 @@ public class HomeActivity extends AppUtilBasement {
         llStore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://themollo.com/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.mollo.kr/"));
                 startActivity(intent);
             }
         });
