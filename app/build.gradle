@@ -49,31 +49,40 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //noinspection GradleCompatible
-    implementation ('com.google.firebase:firebase-database:11.8.0')
+    implementation ('com.google.firebase:firebase-database:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.google.firebase:firebase-auth:11.8.0')
+    implementation ('com.google.firebase:firebase-auth:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.google.firebase:firebase-messaging:11.8.0')
+    implementation ('com.google.firebase:firebase-messaging:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.google.firebase:firebase-core:11.8.0')
+    implementation ('com.google.firebase:firebase-core:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation 'com.firebaseui:firebase-ui-auth:3.2.2'
-    implementation 'com.firebaseui:firebase-ui-database:2.3.0'
+    implementation ('com.firebaseui:firebase-ui-auth:+')
+            {
+                exclude group: 'com.google.android.gms'
+            }
+    implementation ('com.firebaseui:firebase-ui-database:+')
+            {
+                exclude group: 'com.google.android.gms'
+            }
 
     //alert dialog
     implementation 'com.github.f0ris.sweetalert:library:1.5.1'
 
     //sns
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
-    implementation 'com.facebook.android:facebook-android-sdk:4.+'
+    implementation ('com.facebook.android:facebook-android-sdk:4.+')
+            {
+                exclude group: 'com.google.android.gms'
+            }
 
     //butter knife
     implementation 'com.jakewharton:butterknife:8.8.1'
@@ -140,14 +149,8 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.11.3'
 
     //google fit api
-    implementation ('com.google.android.gms:play-services-fitness:16.0.1')
-            {
-                exclude group: 'com.google.android.gms'
-            }
-    implementation ('com.google.android.gms:play-services-auth:16.0.1')
-            {
-                exclude group: 'com.google.android.gms'
-            }
+    implementation ('com.google.android.gms:play-services-fitness:+')
+    implementation ('com.google.android.gms:play-services-auth:+')
 }
 
 
