@@ -217,6 +217,24 @@
                         android:text="오늘의 기온이나 습도가 들어가는 부분"
                         android:textColor="@color/white"
                         android:textSize="12sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/stepContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/temperatureContainer"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <TextView
+                        android:id="@+id/daily_step"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="오늘 걸은 걸음 수"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
