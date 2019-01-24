@@ -38,12 +38,10 @@ public class DiffuserInfo extends AppCompatActivity {
     TextView intent;
 
 
-
     private static final int REQUEST_OAUTH = 1;
     private static final String AUTH_PENDING = "auth_state_pending";
     private boolean authInProgress = false;
     private GoogleApiClient mClient;
-
 
 
     @Override
@@ -53,8 +51,6 @@ public class DiffuserInfo extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.current_temp);
         reload = (TextView) findViewById(R.id.temperature);
-
-
 
 
         if (savedInstanceState != null) {
@@ -114,52 +110,40 @@ public class DiffuserInfo extends AppCompatActivity {
         mClient.connect();
 
 
-
-
-
-
-        reload.setOnClickListener(new View.OnClickListener() {//onclicklistener를 연결하여 터치시 실행됨
+        new AsyncTask() {//AsyncTask객체 생성
             @Override
-            public void onClick(View v) {
-                new AsyncTask() {//AsyncTask객체 생성
-                    @Override
-                    protected Object doInBackground(Object[] params) {
-                        try {
-                            doc = Jsoup.connect("http://www.weather.go.kr/weather/forecast/timeseries.jsp").get(); //기상청 페이지 로딩
-                            contents_temp = doc.select("div.now_weather1");//셀렉터로 현재 날시를 가져옴
-                           // doc = Jsoup.connect("https://weather.naver.com/rgn/townWetr.nhn").get();
-                           // contents_other = doc.select("div.fl");//셀렉터로 현재 날시를 가져옴
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        Temperature = "온도\t\t 풍향, 풍량\t\t 습도\t\t 강수량\n"+contents_temp.text() + "\n";//+contents_other.text()+"\n";
+            protected Object doInBackground(Object[] params) {
+                try {
+                    doc = Jsoup.connect("http://www.weather.go.kr/weather/forecast/timeseries.jsp").get(); //기상청 페이지 로딩
+                    contents_temp = doc.select("div.now_weather1");//셀렉터로 현재 날시를 가져옴
+                    // doc = Jsoup.connect("https://weather.naver.com/rgn/townWetr.nhn").get();
+                    // contents_other = doc.select("div.fl");//셀렉터로 현재 날시를 가져옴
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Temperature = "온도\t\t 풍향, 풍량\t\t 습도\t\t 강수량\n" + contents_temp.text() + "\n";//+contents_other.text()+"\n";
 
-                        return null;
-                    }
-
-                    @Override
-                    protected void onPostExecute(Object o) {
-                        super.onPostExecute(o);
-                        Log.i("TEMP", "" + Temperature);
-                        textView.setText(Temperature);
-                    }
-
-
-                }.execute();
-
+                return null;
             }
-        });
+
+            @Override
+            protected void onPostExecute(Object o) {
+                super.onPostExecute(o);
+                Log.i("TEMP", "" + Temperature);
+                textView.setText(Temperature);
+            }
 
 
+        }.execute();
 
 
         //diffuser 시간 정하는 popup으로 이동
         intent = findViewById(R.id.tvDiffuserOn);
-        intent.setOnClickListener(new View.OnClickListener(){
+        intent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(DiffuserInfo.this,DiffuserTime.class);
+                Intent intent = new Intent(DiffuserInfo.this, DiffuserTime.class);
                 startActivity(intent);
             }
         });
@@ -187,8 +171,8 @@ public class DiffuserInfo extends AppCompatActivity {
         @Override
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
-            final TextView textView=findViewById(R.id.daily_step);
-            textView.setText(String.valueOf(aLong)+" steps" );
+            final TextView textView = findViewById(R.id.daily_step);
+            textView.setText(String.valueOf(aLong) + " steps");
             //Total steps covered for that day
         }
     }
