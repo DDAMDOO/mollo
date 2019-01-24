@@ -81,7 +81,6 @@
              <!--<intent-filter>-->
              <!--<action android:name="android.intent.action.MAIN" />-->
 
-
              <!--<category android:name="android.intent.category.LAUNCHER" />-->
              <!--</intent-filter>-->
         </activity>
@@ -111,8 +110,10 @@
         <activity android:name=".sleeping.SleepingActivity" />
         <activity
             android:name=".util.DiffuserPopup"
-            android:theme="@style/PopupTheme" />
-        <activity android:name=".DiffuserInfo">
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".DiffuserInfo"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -121,9 +122,12 @@
         </activity>
         <activity
             android:name=".DiffuserTime"
-            android:theme="@style/PopupTheme" />
-        <activity android:name=".TimerActivity" />
-        <activity android:name=".TimerFinActivity"></activity>
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TimerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TimerFinActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

@@ -273,15 +273,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
         android:layout_marginTop="20dp"
+        android:layout_weight="0.8"
         android:orientation="vertical">
 
 
         <RelativeLayout
+            android:id="@+id/rcContainer"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2">
+            android:layout_height="wrap_content">
 
 
             <RelativeLayout
@@ -363,23 +363,26 @@
 
         </RelativeLayout>
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/buttonContationer"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="30dp"
         android:layout_weight="0.6"
-        android:layout_marginTop="19.5dp"
         android:orientation="vertical">
+
         <TextView
             android:id="@+id/tvDiffuserOn"
-            android:layout_gravity="center"
             android:layout_width="269dp"
             android:layout_height="55.5dp"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="131.5dp"
             android:background="@drawable/diffuser_button_background"
             android:gravity="center"
             android:lineSpacingExtra="1.5sp"
-            android:layout_marginBottom="131.5dp"
             android:text="@string/diffuserOn"
             android:textColor="@color/white"
             android:textSize="24sp"

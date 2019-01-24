@@ -176,7 +176,6 @@ public class DiffuserInfo extends AppCompatActivity {
                 textView.setText(Temperature);
             }
 
-
         }.execute();
 
 
@@ -219,7 +218,7 @@ public class DiffuserInfo extends AppCompatActivity {
             textView.setText(String.valueOf(aLong) + " steps");
             //Total steps covered for that day
 
-            if(aLong>=1000){
+            if(aLong>=1000&&temp>5){
 
                 rc_scent.setText(String.valueOf("페퍼민트"));
             }
