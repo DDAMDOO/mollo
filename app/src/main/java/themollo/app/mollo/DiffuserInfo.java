@@ -188,7 +188,7 @@ public class DiffuserInfo extends AppCompatActivity {
         protected void onPostExecute(Long aLong) {
             super.onPostExecute(aLong);
             final TextView textView=findViewById(R.id.daily_step);
-            textView.setText(String.valueOf(aLong) );
+            textView.setText(String.valueOf(aLong)+" steps" );
             //Total steps covered for that day
         }
     }

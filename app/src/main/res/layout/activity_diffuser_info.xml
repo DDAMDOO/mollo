@@ -175,7 +175,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="1.51"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -194,10 +194,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
 
+                    android:alpha="0.8"
                     android:gravity="center"
                     android:text="@string/today_temporature"
                     android:textColor="@color/white"
-                    android:alpha="0.8"
                     android:textSize="16sp" />
 
                 <LinearLayout
@@ -218,14 +218,36 @@
                         android:textColor="@color/white"
                         android:textSize="12sp" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dailyContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/temperatureContainer"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/step"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+
+                        android:alpha="0.8"
+                        android:gravity="center"
+                        android:text="daily step"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/stepContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_below="@id/temperatureContainer"
+                    android:layout_below="@id/dailyContainer"
                     android:orientation="horizontal"
                     android:weightSum="3">
+
                     <TextView
                         android:id="@+id/daily_step"
                         android:layout_width="match_parent"
@@ -251,14 +273,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3">
+            android:layout_weight="2">
 
 
             <RelativeLayout
@@ -278,10 +301,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
 
+                        android:alpha="0.8"
                         android:gravity="center"
                         android:text="@string/recomment_smell"
                         android:textColor="@color/white"
-                        android:alpha="0.8"
                         android:textSize="16sp" />
 
                     <LinearLayout
