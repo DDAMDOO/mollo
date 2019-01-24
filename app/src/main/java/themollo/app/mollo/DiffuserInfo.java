@@ -23,6 +23,7 @@ import com.google.android.gms.fitness.result.DailyTotalResult;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
@@ -32,11 +33,16 @@ public class DiffuserInfo extends AppCompatActivity {
     TextView textView; //결과를 띄어줄 TextView
     TextView reload; //reload버튼
     Elements contents_temp;
-    Elements contents_other;
     Document doc = null;
     String Temperature;//결과를 저장할 문자열변수
+    float temp;
+    float wind;
+    float hum;
+    float rain;
     TextView intent;
 
+    //향 추천 텍스트 선언부
+    TextView rc_scent;
 
     private static final int REQUEST_OAUTH = 1;
     private static final String AUTH_PENDING = "auth_state_pending";
@@ -51,7 +57,7 @@ public class DiffuserInfo extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.current_temp);
         reload = (TextView) findViewById(R.id.temperature);
-
+        rc_scent = findViewById(R.id.rc_scent_frame);
 
         if (savedInstanceState != null) {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING);
@@ -115,21 +121,57 @@ public class DiffuserInfo extends AppCompatActivity {
             protected Object doInBackground(Object[] params) {
                 try {
                     doc = Jsoup.connect("http://www.weather.go.kr/weather/forecast/timeseries.jsp").get(); //기상청 페이지 로딩
-                    contents_temp = doc.select("div.now_weather1");//셀렉터로 현재 날시를 가져옴
+                    //contents_temp = doc.select("div.now_weather1");//셀렉터로 현재 날시를 가져옴
+                    //contents_temp = doc.select(".now_weather1");
+                    //contents_temp = doc.select(".now_weather1_center.temp1.MB10");
+                    contents_temp = doc.select(".now_weather1_center");
+
                     // doc = Jsoup.connect("https://weather.naver.com/rgn/townWetr.nhn").get();
                     // contents_other = doc.select("div.fl");//셀렉터로 현재 날시를 가져옴
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Temperature = "온도\t\t 풍향, 풍량\t\t 습도\t\t 강수량\n" + contents_temp.text() + "\n";//+contents_other.text()+"\n";
 
+                // + contents_temp.text()+"\n";
+                int cnt = 0;//숫자를 세기위한 변수
+                for(Element element: contents_temp) {
+                    cnt++;
+
+                    if(cnt==1) {
+                        temp = Float.parseFloat(element.text().substring(0, element.text().length() - 1));
+                        Temperature += temp + "℃ ";
+                    }
+                    if(cnt==2){
+                        wind=Float.parseFloat(element.text().substring(2,element.text().length()-3));
+                        Temperature += wind +"m/s   ";
+                    }
+
+                    if(cnt==3){
+                        hum=Float.parseFloat(element.text().substring(0,element.text().length()-1));
+                        Temperature += hum +"%   ";
+                    }
+
+                    if(cnt == 4) {
+                        Log.d("rain",element.text()+element.text().length());
+                        if(element.text().length()>1) {
+                            rain=Float.parseFloat(element.text().substring(0,element.text().length()-1));
+                        }
+                        else{
+                            rain=0;
+                            Temperature += rain +"mm";
+                        }
+
+                        break;
+                    }
+                }
+                Log.d("asdf",""+temp +"\t"+ wind+"\t"+hum+"\t"+rain);
                 return null;
             }
 
             @Override
             protected void onPostExecute(Object o) {
                 super.onPostExecute(o);
-                Log.i("TEMP", "" + Temperature);
+                Log.i("TEMPINFO", "" + Temperature);
                 textView.setText(Temperature);
             }
 
@@ -170,10 +212,18 @@ public class DiffuserInfo extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long aLong) {
+
             super.onPostExecute(aLong);
             final TextView textView = findViewById(R.id.daily_step);
             textView.setText(String.valueOf(aLong) + " steps");
             //Total steps covered for that day
+
+            if(aLong>=1000){
+
+                rc_scent.setText(String.valueOf("페퍼민트"));
+            }
+            else
+                rc_scent.setText(String.valueOf("라벤더"));
         }
     }
 }
