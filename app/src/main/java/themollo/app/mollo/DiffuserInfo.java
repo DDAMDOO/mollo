@@ -132,14 +132,15 @@ public class DiffuserInfo extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                // + contents_temp.text()+"\n";
+                Temperature="";
+                //Temperature = "온도\t\t풍량\t\t습도\t\t강수량\n";// + contents_temp.text()+"\n";
                 int cnt = 0;//숫자를 세기위한 변수
                 for(Element element: contents_temp) {
                     cnt++;
 
                     if(cnt==1) {
                         temp = Float.parseFloat(element.text().substring(0, element.text().length() - 1));
-                        Temperature += temp + "℃ ";
+                        Temperature += temp + "℃  ";
                     }
                     if(cnt==2){
                         wind=Float.parseFloat(element.text().substring(2,element.text().length()-3));

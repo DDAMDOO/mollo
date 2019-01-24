@@ -192,7 +192,7 @@
                 <TextView
                     android:id="@+id/temperature"
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_height="wrap_content"
 
                     android:alpha="0.8"
                     android:gravity="center"
@@ -207,24 +207,16 @@
                     android:layout_marginTop="20dp"
                     android:orientation="horizontal"
                     android:weightSum="3">
-                    <TextView
-                        android:id="@+id/current_temp_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_marginTop="12dp"
-                        android:gravity="center"
-                        android:text="온도\t\t풍량\t\t습도\t\t강수량\n"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/current_temp"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
+                        android:layout_marginTop="12dp"
                         android:gravity="center"
                         android:text="오늘의 기온 및 습도"
                         android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <LinearLayout
