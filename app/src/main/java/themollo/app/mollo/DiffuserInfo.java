@@ -159,7 +159,7 @@ public class DiffuserInfo extends AppCompatActivity {
                         }
                         else{
                             rain=0;
-                            Temperature += rain +"mm";
+                            Temperature += rain +"mm/h";
                         }
 
                         break;
