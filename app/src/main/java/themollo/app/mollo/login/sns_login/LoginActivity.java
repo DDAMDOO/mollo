@@ -1,5 +1,6 @@
 package themollo.app.mollo.login.sns_login;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -33,6 +34,7 @@ import com.kakao.util.exception.KakaoException;
 import org.json.JSONObject;
 
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -44,6 +46,8 @@ import themollo.app.mollo.firebase.SignInActivity;
 import themollo.app.mollo.firebase.SignUpActivity;
 import themollo.app.mollo.survey.DoSurveyActivity;
 import themollo.app.mollo.util.BackPressController;
+
+import static com.kakao.util.helper.Utility.getPackageInfo;
 
 public class LoginActivity extends FirebaseLogin {
 
@@ -128,11 +132,10 @@ public class LoginActivity extends FirebaseLogin {
             for(Signature signature :info.signatures){
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());
-                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));
-                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));
+                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));//facebook hash
+                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));//kakao hash
             }
         }catch(Exception e){}
-
 
 
         setRegisterKakaoCallback();
