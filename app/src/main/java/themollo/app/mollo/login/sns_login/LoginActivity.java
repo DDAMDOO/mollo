@@ -1,7 +1,11 @@
 package themollo.app.mollo.login.sns_login;
 
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -28,6 +32,7 @@ import com.kakao.util.exception.KakaoException;
 
 import org.json.JSONObject;
 
+import java.security.MessageDigest;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -116,6 +121,18 @@ public class LoginActivity extends FirebaseLogin {
         butterBind();
 
         backPressController = new BackPressController(this);
+//for keyhash
+        try{
+            PackageInfo info = getPackageManager().getPackageInfo("themollo.app.mollo", PackageManager.GET_SIGNATURES);
+
+            for(Signature signature :info.signatures){
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));
+                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));
+            }
+        }catch(Exception e){}
+
 
 
         setRegisterKakaoCallback();
@@ -250,7 +267,7 @@ public class LoginActivity extends FirebaseLogin {
                 graphRequest.executeAsync();
 
                 Profile profile = Profile.getCurrentProfile();
-                Log.i("facebook_info", profile.getName());
+                //Log.i("facebook_info", profile.getName());
                 Log.i("facebook_info", profile.getProfilePictureUri(100,100) + "");
 
                 putLoginData(MY_NAME, profile.getName());
