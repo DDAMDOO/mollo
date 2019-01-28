@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import me.relex.circleindicator.CircleIndicator;
 import themollo.app.mollo.R;
+import themollo.app.mollo.login.sns_login.LoginActivity;
 import themollo.app.mollo.survey.DoSurveyActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 import themollo.app.mollo.util.BackPressController;
@@ -122,7 +123,8 @@ public class TutorialActivity extends AppUtilBasement {
         tvStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(TutorialActivity.this, DoSurveyActivity.class));
+//                startActivity(new Intent(TutorialActivity.this, DoSurveyActivity.class));
+                startActivity(new Intent(TutorialActivity.this, LoginActivity.class));
             }
         });
     }

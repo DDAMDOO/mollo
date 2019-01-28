@@ -49,27 +49,27 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //noinspection GradleCompatible
-    implementation ('com.google.firebase:firebase-database:+')
+    implementation('com.google.firebase:firebase-database:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.google.firebase:firebase-auth:+')
+    implementation('com.google.firebase:firebase-auth:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.google.firebase:firebase-messaging:+')
+    implementation('com.google.firebase:firebase-messaging:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.google.firebase:firebase-core:+')
+    implementation('com.google.firebase:firebase-core:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.firebaseui:firebase-ui-auth:+')
+    implementation('com.firebaseui:firebase-ui-auth:+')
             {
                 exclude group: 'com.google.android.gms'
             }
-    implementation ('com.firebaseui:firebase-ui-database:+')
+    implementation('com.firebaseui:firebase-ui-database:+')
             {
                 exclude group: 'com.google.android.gms'
             }
@@ -79,7 +79,7 @@ dependencies {
 
     //sns
     implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
-    implementation ('com.facebook.android:facebook-android-sdk:4.+')
+    implementation('com.facebook.android:facebook-android-sdk:4.+')
             {
                 exclude group: 'com.google.android.gms'
             }
@@ -149,8 +149,8 @@ dependencies {
     implementation 'org.jsoup:jsoup:1.11.3'
 
     //google fit api
-    implementation ('com.google.android.gms:play-services-fitness:+')
-    implementation ('com.google.android.gms:play-services-auth:+')
+    implementation('com.google.android.gms:play-services-fitness:+')
+    implementation('com.google.android.gms:play-services-auth:+')
 }
 
 configurations.all {
