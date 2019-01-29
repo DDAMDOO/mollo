@@ -1,13 +1,17 @@
 package themollo.app.mollo.diffuser;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
 import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -34,6 +38,7 @@ import themollo.app.mollo.R;
 public class DiffuserInfo extends AppCompatActivity {
     TextView textView; //결과를 띄어줄 TextView
     TextView reload; //reload버튼
+    TextView btn;
     Elements contents_temp;
     Document doc = null;
     String Temperature;//결과를 저장할 문자열변수
@@ -60,6 +65,7 @@ public class DiffuserInfo extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.current_temp);
         reload = (TextView) findViewById(R.id.temperature);
         rc_scent = findViewById(R.id.rc_scent_frame);
+        btn = findViewById(R.id.tvDiffuserPower);
 
         if (savedInstanceState != null) {
             authInProgress = savedInstanceState.getBoolean(AUTH_PENDING);
@@ -190,6 +196,33 @@ public class DiffuserInfo extends AppCompatActivity {
                 Intent intent = new Intent(DiffuserInfo.this, DiffuserTime.class);
                 startActivity(intent);
             }
+        });
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final String[] options = new String[]{"1단계", "2단계", "3단계"};
+                final int[] selectedIndex={0};
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(DiffuserInfo.this);
+                dialog.setTitle("디퓨저 세기를 선택하세요")
+                        .setSingleChoiceItems(options,
+                                0,
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        selectedIndex[0]=which;
+                                    }
+                                })
+                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Toast.makeText(DiffuserInfo.this, options[selectedIndex[0]],Toast.LENGTH_SHORT).show();
+                            }
+                        }).create().show();
+                }
+
         });
     }
 

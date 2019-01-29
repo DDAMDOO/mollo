@@ -16,11 +16,13 @@
 
 
         <RelativeLayout
+            android:id="@+id/CurrentScentContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="19.5dp">
 
             <RelativeLayout
+                android:id="@+id/current_scent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="26dp"
@@ -31,10 +33,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
 
+                    android:alpha="0.8"
                     android:gravity="center"
                     android:text="@string/diffuser_smell"
                     android:textColor="@color/white"
-                    android:alpha="0.8"
                     android:textSize="16sp" />
 
                 <LinearLayout
@@ -167,7 +169,38 @@
             </RelativeLayout>
 
 
+
+
+
         </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/PowerButtonContationer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_marginTop="30dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDiffuserPower"
+                android:layout_width="269dp"
+                android:layout_height="55.5dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginBottom="131.5dp"
+                android:background="@drawable/diffuser_button_background"
+                android:gravity="center"
+                android:lineSpacingExtra="1.5sp"
+                android:text="@string/diffuserPower"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
 
 
     </LinearLayout>
