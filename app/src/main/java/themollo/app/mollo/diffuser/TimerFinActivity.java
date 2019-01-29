@@ -1,4 +1,4 @@
-package themollo.app.mollo;
+package themollo.app.mollo.diffuser;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import themollo.app.mollo.R;
 import themollo.app.mollo.home.HomeActivity;
 import themollo.app.mollo.util.BackPressController;
 

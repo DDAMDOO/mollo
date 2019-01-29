@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/base_background_gradient"
-    tools:context=".TimerFinActivity">
+    tools:context=".diffuser.TimerFinActivity">
     <RelativeLayout
         android:id="@+id/remain"
         android:layout_width="match_parent"

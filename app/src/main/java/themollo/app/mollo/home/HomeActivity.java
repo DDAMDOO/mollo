@@ -8,7 +8,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.os.Bundle;
@@ -22,16 +21,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import java.util.Timer;
 
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import themollo.app.mollo.DiffuserInfo;
-import themollo.app.mollo.DiffuserTime;
+import themollo.app.mollo.diffuser.DiffuserInfo;
 import themollo.app.mollo.account.MyAccountActivity;
 import themollo.app.mollo.R;
 import themollo.app.mollo.alarm.AlarmActivity;

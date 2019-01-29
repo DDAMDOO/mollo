@@ -1,4 +1,4 @@
-package themollo.app.mollo;
+package themollo.app.mollo.diffuser;
 
 import android.content.Intent;
 import android.content.IntentSender;
@@ -28,6 +28,8 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
+
+import themollo.app.mollo.R;
 
 public class DiffuserInfo extends AppCompatActivity {
     TextView textView; //결과를 띄어줄 TextView

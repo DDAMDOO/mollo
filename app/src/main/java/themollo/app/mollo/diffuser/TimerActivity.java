@@ -1,23 +1,13 @@
-package themollo.app.mollo;
+package themollo.app.mollo.diffuser;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.CountDownTimer;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Timer;
-import java.util.TimerTask;
-
+import themollo.app.mollo.R;
 import themollo.app.mollo.util.BackPressController;
 
 public class TimerActivity extends Activity {

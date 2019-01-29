@@ -111,7 +111,7 @@
             android:name=".util.DiffuserPopup"
             android:theme="@style/PopupTheme"
             android:screenOrientation="portrait"/>
-        <activity android:name=".DiffuserInfo"
+        <activity android:name=".diffuser.DiffuserInfo"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
@@ -120,12 +120,12 @@
             <!--</intent-filter>-->
         </activity>
         <activity
-            android:name=".DiffuserTime"
+            android:name=".diffuser.DiffuserTime"
             android:theme="@style/PopupTheme"
             android:screenOrientation="portrait"/>
-        <activity android:name=".TimerActivity"
+        <activity android:name=".diffuser.TimerActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name=".TimerFinActivity"
+        <activity android:name=".diffuser.TimerFinActivity"
             android:screenOrientation="portrait"></activity>
     </application>
 

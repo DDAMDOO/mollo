@@ -47,6 +47,17 @@ import themollo.app.mollo.firebase.SignUpActivity;
 import themollo.app.mollo.survey.DoSurveyActivity;
 import themollo.app.mollo.util.BackPressController;
 
+
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.util.Base64;
+import android.util.Log;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+
 import static com.kakao.util.helper.Utility.getPackageInfo;
 
 public class LoginActivity extends FirebaseLogin {
@@ -126,22 +137,44 @@ public class LoginActivity extends FirebaseLogin {
 
         backPressController = new BackPressController(this);
 //for keyhash
-        try{
-            PackageInfo info = getPackageManager().getPackageInfo("themollo.app.mollo", PackageManager.GET_SIGNATURES);
-
-            for(Signature signature :info.signatures){
-                MessageDigest md = MessageDigest.getInstance("SHA");
-                md.update(signature.toByteArray());
-                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));//facebook hash
-                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));//kakao hash
-            }
-        }catch(Exception e){}
-
-
+//        try{
+//            PackageInfo info = getPackageManager().getPackageInfo("themollo.app.mollo", PackageManager.GET_SIGNATURES);
+//
+//            for(Signature signature :info.signatures){
+//                MessageDigest md = MessageDigest.getInstance("SHA");
+//                md.update(signature.toByteArray());
+//                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));//facebook hash
+//                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));//kakao hash
+//            }
+//        }catch(Exception e){}
+        getHashKey();
         setRegisterKakaoCallback();
         setRegisterFacebookCallback();
         setButtonListener();
     }
+    private void getHashKey(){
+        PackageInfo packageInfo = null;
+        try {
+            packageInfo = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        if (packageInfo == null)
+            Log.e("KeyHash", "KeyHash:null");
+
+        for (Signature signature : packageInfo.signatures) {
+            try {
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d("KeyHash", Base64.encodeToString(md.digest(), Base64.DEFAULT));
+                String something = new String(Base64.encode(md.digest(), 0));
+                Log.d("Hash key", something);
+            } catch (NoSuchAlgorithmException e) {
+                Log.e("KeyHash", "Unable to get MessageDigest. signature=" + signature, e);
+            }
+        }
+    }
+
 
     public void requestInfo(){
         ArrayList<String> keys = new ArrayList<>();
