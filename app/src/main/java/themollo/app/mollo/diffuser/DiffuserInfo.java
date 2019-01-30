@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -220,7 +222,10 @@ public class DiffuserInfo extends AppCompatActivity {
                             public void onClick(DialogInterface dialog, int which) {
                                 Toast.makeText(DiffuserInfo.this, options[selectedIndex[0]],Toast.LENGTH_SHORT).show();
                             }
-                        }).create().show();
+                        });
+                AlertDialog dg = dialog.create();
+                dg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
+                dg.show();
                 }
 
         });
