@@ -16,7 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-
+        <activity
+            android:name=".DiffuserPowerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupTheme" >
+        </activity>
         <!-- provider -->
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -26,37 +30,28 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_provider_paths" />
-        </provider>
-
-        <!-- receiver -->
+        </provider> <!-- receiver -->
         <receiver android:name=".sleeping.AlarmReceiver">
             <intent-filter>
                 <action android:name="themollo.app.mollo.alarm.AlarmStart" />
             </intent-filter>
-        </receiver>
-
-        <!-- service -->
+        </receiver> <!-- service -->
         <service
             android:name=".sleeping.SleepSoundService"
-            android:enabled="true" />
-
-        <!-- meta data -->
+            android:enabled="true" /> <!-- meta data -->
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"
-            tools:replace="android:value" />
-
-        <!-- activities -->
+            tools:replace="android:value" /> <!-- activities -->
         <activity android:name=".splash.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-             <intent-filter>
-             <action android:name="android.intent.action.MAIN" />
-
-             <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".sample.MainActivity" />
         <activity android:name=".login.sns_login.LoginActivity" />
@@ -77,11 +72,12 @@
             android:name=".home.HomeActivity"
             android:theme="@style/BaseAppTheme">
 
-             <!--<intent-filter>-->
-             <!--<action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-             <!--<category android:name="android.intent.category.LAUNCHER" />-->
-             <!--</intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".util.SketchBook"
@@ -109,24 +105,29 @@
         <activity android:name=".sleeping.SleepingActivity" />
         <activity
             android:name=".util.DiffuserPopup"
-            android:theme="@style/PopupTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".diffuser.DiffuserInfo"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".diffuser.DiffuserInfo"
             android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".diffuser.DiffuserTime"
-            android:theme="@style/PopupTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".diffuser.TimerActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".diffuser.TimerFinActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".diffuser.TimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".diffuser.TimerFinActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

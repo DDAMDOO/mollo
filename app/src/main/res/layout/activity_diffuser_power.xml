@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="269dp"
+    android:layout_height="294.5dp"
+    android:background="@drawable/popup_background_alpha"
+    tools:context="themollo.app.mollo.util.DiffuserPopup">
+
+    <TextView
+        android:id="@+id/diffuser_power_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87.5dp"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:text="@string/diffuser_power"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/valueContainer"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diffuser_power_sub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp">
+
+            <TextView
+                android:id="@+id/sbValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/init_power_min" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/power"
+                android:textColor="@color/white"
+                android:textSize="14.5sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <SeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diffuser_power_sub"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="62dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="3"
+        android:progress="1"
+        android:progressDrawable="@drawable/seekbar_background"
+        android:thumb="@mipmap/oval" />
+
+    <TextView
+        android:id="@+id/tvOk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26.5dp"
+        android:gravity="center"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+</RelativeLayout>

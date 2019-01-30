@@ -35,6 +35,7 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import themollo.app.mollo.DiffuserPowerActivity;
 import themollo.app.mollo.R;
 
 public class DiffuserInfo extends AppCompatActivity {
@@ -49,6 +50,7 @@ public class DiffuserInfo extends AppCompatActivity {
     float hum;
     float rain;
     TextView intent;
+    TextView intent1;
 
     //향 추천 텍스트 선언부
     TextView rc_scent;
@@ -200,35 +202,44 @@ public class DiffuserInfo extends AppCompatActivity {
             }
         });
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        intent1 = findViewById(R.id.tvDiffuserPower);
+        intent1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                final String[] options = new String[]{"1단계", "2단계", "3단계"};
-                final int[] selectedIndex={0};
-
-                AlertDialog.Builder dialog = new AlertDialog.Builder(DiffuserInfo.this);
-                dialog.setTitle("디퓨저 세기를 선택하세요")
-                        .setSingleChoiceItems(options,
-                                0,
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        selectedIndex[0]=which;
-                                    }
-                                })
-                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(DiffuserInfo.this, options[selectedIndex[0]],Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                AlertDialog dg = dialog.create();
-                dg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
-                dg.show();
-                }
-
+                Intent intent = new Intent(DiffuserInfo.this, DiffuserPowerActivity.class);
+                startActivity(intent);
+            }
         });
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                final String[] options = new String[]{"1단계", "2단계", "3단계"};
+//                final int[] selectedIndex={0};
+//
+//                AlertDialog.Builder dialog = new AlertDialog.Builder(DiffuserInfo.this);
+//                dialog.setTitle("디퓨저 세기를 선택하세요")
+//                        .setSingleChoiceItems(options,
+//                                0,
+//                                new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialog, int which) {
+//                                        selectedIndex[0]=which;
+//                                    }
+//                                })
+//                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Toast.makeText(DiffuserInfo.this, options[selectedIndex[0]],Toast.LENGTH_SHORT).show();
+//                            }
+//                        });
+//                AlertDialog dg = dialog.create();
+//                dg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
+//                dg.show();
+//                }
+//
+//        });
     }
 
 

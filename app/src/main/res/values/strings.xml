@@ -174,6 +174,11 @@
     <string name="diffuser_timer">타이머</string>
     <string name="remain_time">남은 시간</string>
 
+    <!--Diffuser Poser-->
+    <string name="diffuser_power">DIFFUSER POWER</string>
+    <string name="power">단계</string>
+    <string name="init_power_min">1</string>
+
     <!--last activity-->
     <string name="home_btn">홈으로</string>
     <string name="bye">디퓨저가 종료되었습니다.</string>
