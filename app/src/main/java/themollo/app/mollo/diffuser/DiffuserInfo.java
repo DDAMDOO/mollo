@@ -144,40 +144,39 @@ public class DiffuserInfo extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                Temperature="";
+                Temperature = "";
                 //Temperature = "온도\t\t풍량\t\t습도\t\t강수량\n";// + contents_temp.text()+"\n";
                 int cnt = 0;//숫자를 세기위한 변수
-                for(Element element: contents_temp) {
+                for (Element element : contents_temp) {
                     cnt++;
 
-                    if(cnt==1) {
+                    if (cnt == 1) {
                         temp = Float.parseFloat(element.text().substring(0, element.text().length() - 1));
                         Temperature += temp + "℃  ";
                     }
-                    if(cnt==2){
-                        wind=Float.parseFloat(element.text().substring(2,element.text().length()-3));
-                        Temperature += wind +"m/s   ";
+                    if (cnt == 2) {
+                        wind = Float.parseFloat(element.text().substring(2, element.text().length() - 3));
+                        Temperature += wind + "m/s   ";
                     }
 
-                    if(cnt==3){
-                        hum=Float.parseFloat(element.text().substring(0,element.text().length()-1));
-                        Temperature += hum +"%   ";
+                    if (cnt == 3) {
+                        hum = Float.parseFloat(element.text().substring(0, element.text().length() - 1));
+                        Temperature += hum + "%   ";
                     }
 
-                    if(cnt == 4) {
-                        Log.d("rain",element.text()+element.text().length());
-                        if(element.text().length()>1) {
-                            rain=Float.parseFloat(element.text().substring(0,element.text().length()-1));
-                        }
-                        else{
-                            rain=0;
-                            Temperature += rain +"mm/h";
+                    if (cnt == 4) {
+                        Log.d("rain", element.text() + element.text().length());
+                        if (element.text().length() > 1) {
+                            rain = Float.parseFloat(element.text().substring(0, element.text().length() - 1));
+                        } else {
+                            rain = 0;
+                            Temperature += rain + "mm/h";
                         }
 
                         break;
                     }
                 }
-                Log.d("asdf",""+temp +"\t"+ wind+"\t"+hum+"\t"+rain);
+                Log.d("weather_info", "" + temp + "\t" + wind + "\t" + hum + "\t" + rain);
                 return null;
             }
 
@@ -187,6 +186,8 @@ public class DiffuserInfo extends AppCompatActivity {
                 Log.i("TEMPINFO", "" + Temperature);
                 textView.setText(Temperature);
             }
+
+
 
         }.execute();
 
@@ -211,40 +212,12 @@ public class DiffuserInfo extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                final String[] options = new String[]{"1단계", "2단계", "3단계"};
-//                final int[] selectedIndex={0};
-//
-//                AlertDialog.Builder dialog = new AlertDialog.Builder(DiffuserInfo.this);
-//                dialog.setTitle("디퓨저 세기를 선택하세요")
-//                        .setSingleChoiceItems(options,
-//                                0,
-//                                new DialogInterface.OnClickListener() {
-//                                    @Override
-//                                    public void onClick(DialogInterface dialog, int which) {
-//                                        selectedIndex[0]=which;
-//                                    }
-//                                })
-//                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                Toast.makeText(DiffuserInfo.this, options[selectedIndex[0]],Toast.LENGTH_SHORT).show();
-//                            }
-//                        });
-//                AlertDialog dg = dialog.create();
-//                dg.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
-//                dg.show();
-//                }
-//
-//        });
     }
 
 
     private class FetchStepsAsync extends AsyncTask<Object, Object, Long> {
         protected Long doInBackground(Object... params) {
+            Log.d("가나다", "steps");
             long total = 0;
             PendingResult<DailyTotalResult> result = Fitness.HistoryApi.readDailyTotal(mClient, DataType.TYPE_STEP_COUNT_DELTA);
             DailyTotalResult totalResult = result.await(30, TimeUnit.SECONDS);
@@ -263,17 +236,17 @@ public class DiffuserInfo extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long aLong) {
-
+            Log.d("가나다", String.valueOf(aLong) + "steps");
             super.onPostExecute(aLong);
             final TextView textView = findViewById(R.id.daily_step);
-            textView.setText(String.valueOf(aLong) + " steps");
+            textView.setText("asdfasdf");
+
             //Total steps covered for that day
 
-            if(aLong>=1000&&temp>5){
+            if (aLong >= 1000 && temp > 5) {
 
                 rc_scent.setText(String.valueOf("페퍼민트"));
-            }
-            else
+            } else
                 rc_scent.setText(String.valueOf("라벤더"));
         }
     }
