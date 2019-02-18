@@ -146,21 +146,6 @@ public class HomeActivity extends AppUtilBasement {
 //        timer = null;
     }
 
-//    private TimerTask getTimerTask() {
-//        return new TimerTask() {
-//            @Override
-//            public void run() {
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        Date now = new Date();
-//                        ttvCurTime.setTime(now);
-//                    }
-//                });
-//            }
-//        };
-//    }
-
     private void transitionOverride(){
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             ChangeBounds changeBounds = new ChangeBounds();
@@ -244,6 +229,7 @@ public class HomeActivity extends AppUtilBasement {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        //mBluetoothGatt = device.connectGatt(this, false, mGattCallback);
                         Toast.makeText(HomeActivity.this, "'확인'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(HomeActivity.this, DiffuserInfo.class);
                         startActivity(intent);

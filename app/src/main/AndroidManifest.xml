@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
     <application
         android:name=".util.MolloApplication"
         android:allowBackup="true"
@@ -19,11 +21,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity
-            android:name=".DiffuserPowerActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/PopupTheme" >
-        </activity>
         <!-- provider -->
         <provider
             android:name="android.support.v4.content.FileProvider"

@@ -1,6 +1,5 @@
-package themollo.app.mollo;
+package themollo.app.mollo.diffuser;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +9,7 @@ import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import themollo.app.mollo.diffuser.DiffuserInfo;
+import themollo.app.mollo.R;
 import themollo.app.mollo.util.AppUtilBasement;
 
 public class DiffuserPowerActivity extends AppUtilBasement {
