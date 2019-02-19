@@ -131,8 +131,17 @@
         <activity
             android:name=".diffuser.TimerFinActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".bluetooth.DeviceActivity"></activity>
-        <activity android:name=".bluetooth.MainActivity" />
+        <activity
+            android:name=".diffuser.DiffuserPowerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".bluetooth.DeviceActivity"
+            android:theme="@style/PopupTheme">
+        </activity>
+        <activity
+            android:name=".bluetooth.MainActivity"
+            android:theme="@style/PopupTheme"/>
     </application>
 
 </manifest>

@@ -137,16 +137,16 @@ public class LoginActivity extends FirebaseLogin {
 
         backPressController = new BackPressController(this);
 //for keyhash
-//        try{
-//            PackageInfo info = getPackageManager().getPackageInfo("themollo.app.mollo", PackageManager.GET_SIGNATURES);
-//
-//            for(Signature signature :info.signatures){
-//                MessageDigest md = MessageDigest.getInstance("SHA");
-//                md.update(signature.toByteArray());
-//                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));//facebook hash
-//                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));//kakao hash
-//            }
-//        }catch(Exception e){}
+        try{
+            PackageInfo info = getPackageManager().getPackageInfo("themollo.app.mollo", PackageManager.GET_SIGNATURES);
+
+            for(Signature signature :info.signatures){
+                MessageDigest md = MessageDigest.getInstance("SHA");
+                md.update(signature.toByteArray());
+                Log.d(TAG, "Keyhash: "+ Base64.encodeToString(md.digest(),Base64.DEFAULT));//facebook hash
+                Log.d(TAG, "Keyhash1: "+Base64.encodeToString(md.digest(), Base64.NO_WRAP));//kakao hash
+            }
+        }catch(Exception e){}
         getHashKey();
         setRegisterKakaoCallback();
         setRegisterFacebookCallback();

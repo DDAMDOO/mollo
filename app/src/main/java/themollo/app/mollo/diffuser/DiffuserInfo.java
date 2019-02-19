@@ -232,7 +232,7 @@ public class DiffuserInfo extends AppCompatActivity {
             Log.d("가나다", String.valueOf(aLong) + "steps");
             super.onPostExecute(aLong);
             final TextView textView = findViewById(R.id.daily_step);
-            textView.setText("asdfasdf");
+            textView.setText(String.valueOf(aLong) + " steps");
 
             //Total steps covered for that day
 

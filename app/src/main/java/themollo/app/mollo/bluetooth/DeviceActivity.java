@@ -38,7 +38,7 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
     private BluetoothDevice mDevice;
     private BluetoothGatt mConnGatt;
     private int mStatus;
-    Button start, s1Button, s2Button, s3Button;
+    Button s1Button, s2Button, s3Button, t1Button, t2Button, t3Button;
 
     private final BluetoothGattCallback mGattcallback = new BluetoothGattCallback() {
         @Override
@@ -94,16 +94,18 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
         // state
         mStatus = BluetoothProfile.STATE_DISCONNECTED;
 
-        start = (Button) findViewById(R.id.read_state);
-        start.setOnClickListener(this);
         s1Button = (Button) findViewById(R.id.scent1_btn);
         s1Button.setOnClickListener(this);
         s2Button = (Button) findViewById(R.id.scent2_btn);
         s2Button.setOnClickListener(this);
         s3Button = (Button) findViewById(R.id.scent3_btn);
         s3Button.setOnClickListener(this);
-//        mTurnOnLEDButton = (Button) findViewById(R.id.turn_on_led);
-//        mTurnOnLEDButton.setOnClickListener(this);
+        t1Button = (Button) findViewById(R.id.timer1_btn);
+        t1Button.setOnClickListener(this);
+        t2Button = (Button) findViewById(R.id.timer2_btn);
+        t2Button.setOnClickListener(this);
+        t3Button = (Button) findViewById(R.id.timer3_btn);
+        t3Button.setOnClickListener(this);
     }
 
     @Override
@@ -134,34 +136,8 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         Toast.makeText(getApplicationContext(), "value=", Toast.LENGTH_LONG);
         Log.d("aa", "aaaaaaaaaaaaaaaaaaaaaaaa");
-        if (v.getId() == R.id.read_state) {
-            Log.d("btcheck", "1111");
-            BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
-            Log.d("btcheck", String.valueOf(disService));
-            if (disService == null) {
-                Log.d("UUID 에러", "Dis service not found!");
-                return;
-            }
-            Log.d("btcheck", "2222");
-            BluetoothGattCharacteristic characteristic = disService.getCharacteristic(UUID.fromString("6e400002-b5a3-f393-e0a9-e50e24dcca9e"));
-            Log.d("btcheck", "3333");
-
-            if (characteristic == null) {
-                Log.d("characteristic 에러", "charateristic not found!");
-                return;
-            }
-
-            Log.d("btcheck", "5555" + String.valueOf(characteristic) + " " + characteristic);
-            characteristic.setValue(new byte[]{0x61, 0x74});
-            Log.d("btcheck", "6666" + String.valueOf(characteristic.setValue(new byte[]{(byte) 0x61, (byte) 0x74})));
-            if (mConnGatt.writeCharacteristic(characteristic)) {
-                Log.d("btcheck", "7777" + String.valueOf(characteristic) + " " + characteristic);
-            }
-            Log.d("btcheck", "8888");
-//            boolean result = mConnGatt.readCharacteristic(characteristic);
-//            Log.d("btcheck","9999"+result);
-        }////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        else if (v.getId() == R.id.scent1_btn) {
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (v.getId() == R.id.scent1_btn) {
             BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
             if (disService == null) {
                 Log.d("", "Dis service not found!");
@@ -206,6 +182,92 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
                 Log.d("btcheck", "write correct");
             }
 
+        }else if (v.getId() == R.id.scent3_btn) {
+
+            BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (disService == null) {
+                Log.d("", "Dis service not found!");
+                return;
+            }
+
+
+            BluetoothGattCharacteristic characteristic = disService.getCharacteristic(UUID.fromString("6e400002-b5a3-f393-e0a9-e50e24dcca9e"));
+
+            if (characteristic == null) {
+                Log.d("", "charateristic not found!");
+                return;
+            }
+
+
+            characteristic.setValue(new byte[]{0x61, 0x74, 0x46, 0x36});
+            Log.d("btcheck", "after btn1" + characteristic);
+
+            if (mConnGatt.writeCharacteristic(characteristic)) {
+                Log.d("btcheck", "write correct");
+            }
+
+        }else if (v.getId() == R.id.timer1_btn) {
+            BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (disService == null) {
+                Log.d("", "Dis service not found!");
+                return;
+            }
+
+            BluetoothGattCharacteristic characteristic = disService.getCharacteristic(UUID.fromString("6e400002-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (characteristic == null) {
+                Log.d("characteristic 에러", "charateristic not found!");
+                return;
+                //fb256b0
+            }
+            Log.d("btcheck", "timer" + characteristic);
+            characteristic.setValue(new byte[]{0x61, 0x74, 0x46, 0x31});
+            Log.d("btcheck", "timer" + characteristic);
+
+            if (mConnGatt.writeCharacteristic(characteristic)) {
+                Log.d("btcheck", "write correct");
+            }
+
+        }else if (v.getId() == R.id.timer2_btn) {
+            BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (disService == null) {
+                Log.d("", "Dis service not found!");
+                return;
+            }
+
+            BluetoothGattCharacteristic characteristic = disService.getCharacteristic(UUID.fromString("6e400002-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (characteristic == null) {
+                Log.d("characteristic 에러", "charateristic not found!");
+                return;
+                //fb256b0
+            }
+            Log.d("btcheck", "before btn1" + characteristic);
+            characteristic.setValue(new byte[]{0x61, 0x74, 0x46, 0x32});
+            Log.d("btcheck", "after btn1" + characteristic);
+
+            if (mConnGatt.writeCharacteristic(characteristic)) {
+                Log.d("btcheck", "write correct");
+            }
+
+        }else if (v.getId() == R.id.timer3_btn) {
+            BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (disService == null) {
+                Log.d("", "Dis service not found!");
+                return;
+            }
+
+            BluetoothGattCharacteristic characteristic = disService.getCharacteristic(UUID.fromString("6e400002-b5a3-f393-e0a9-e50e24dcca9e"));
+            if (characteristic == null) {
+                Log.d("characteristic 에러", "charateristic not found!");
+                return;
+                //fb256b0
+            }
+            Log.d("btcheck", "before btn1" + characteristic);
+            characteristic.setValue(new byte[]{0x61, 0x74, 0x46, 0x33});
+            Log.d("btcheck", "after btn1" + characteristic);
+
+            if (mConnGatt.writeCharacteristic(characteristic)) {
+                Log.d("btcheck", "write correct");
+            }
         }
     }
 

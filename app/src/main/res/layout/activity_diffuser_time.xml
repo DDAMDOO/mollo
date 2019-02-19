@@ -20,6 +20,38 @@
         android:textSize="29sp"
         android:textStyle="bold" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_below="@+id/diffuser_time_sub">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scent_frame1"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/scent1_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1번 향" />
+
+            <Button
+                android:id="@+id/scent2_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2번 향" />
+
+            <Button
+                android:id="@+id/scent3_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3번 향" />
+        </LinearLayout>
+    </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/valueContainer"
         android:layout_width="289dp"
