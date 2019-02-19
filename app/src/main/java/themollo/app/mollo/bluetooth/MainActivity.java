@@ -186,8 +186,8 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
             public void onItemClick(AdapterView<?> adapterview, View view, int position, long id) {
                 ScannedDevice item = mDeviceAdapter.getItem(position);
                 if (item != null) {
-//                    Intent intent = new Intent(view.getContext(), DeviceActivity.class);
-                    Intent intent = new Intent(view.getContext(), DiffuserInfo.class);
+                    Intent intent = new Intent(view.getContext(), DeviceActivity.class);
+                    //Intent intent = new Intent(view.getContext(), DiffuserInfo.class);
                     BluetoothDevice selectedDevice = item.getDevice();
                     intent.putExtra(DeviceActivity.EXTRA_BLUETOOTH_DEVICE, selectedDevice);
                     startActivity(intent);

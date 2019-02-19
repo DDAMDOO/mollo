@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import themollo.app.mollo.R;
+import themollo.app.mollo.diffuser.TimerActivity;
 
 
 public class DeviceActivity extends Activity implements View.OnClickListener {
@@ -70,8 +71,6 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
 
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        TextView tv = (TextView) findViewById(R.id.tv);
-                        tv.setText("value=" + i);
                     }
                 });
 
@@ -226,6 +225,9 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
             if (mConnGatt.writeCharacteristic(characteristic)) {
                 Log.d("btcheck", "write correct");
             }
+            Intent intent = new Intent(DeviceActivity.this, TimerActivity.class);
+            intent.putExtra("countdown_val",20);
+            startActivity(intent);
 
         }else if (v.getId() == R.id.timer2_btn) {
             BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
@@ -248,6 +250,7 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
                 Log.d("btcheck", "write correct");
             }
 
+
         }else if (v.getId() == R.id.timer3_btn) {
             BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
             if (disService == null) {
@@ -269,6 +272,8 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
                 Log.d("btcheck", "write correct");
             }
         }
+//        else if (v.getId() == R.id.timer3_btn) {}
+
     }
 
     private void init() {

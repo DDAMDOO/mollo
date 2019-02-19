@@ -58,7 +58,7 @@ public class DiffuserTime extends AppUtilBasement {
             public void onClick(View v) {
                 Intent intent = new Intent(DiffuserTime.this, TimerActivity.class);
                 intent.putExtra("countdown_val",sbVal.getText().toString());
-
+                Log.d("titimer",sbVal.getText().toString());
                 startActivity(intent);
                 finish();
             }
