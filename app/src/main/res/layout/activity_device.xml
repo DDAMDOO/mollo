@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".bluetooth.DeviceActivity">
+
+    <Button
+        android:id="@+id/read_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="read_state" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="25dp"
+        android:text="" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scent_frame1"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/scent1_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1번 향" />
+
+            <Button
+                android:id="@+id/scent2_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2번 향" />
+
+            <Button
+                android:id="@+id/scent3_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3번 향" />
+
+
+        </LinearLayout>
+
+</LinearLayout>
+    <Button
+        android:id="@+id/turn_on_led"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Turn On LED" />
+</LinearLayout>

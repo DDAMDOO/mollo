@@ -27,6 +27,7 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import themollo.app.mollo.bluetooth.MainActivity;
 import themollo.app.mollo.diffuser.DiffuserInfo;
 import themollo.app.mollo.account.MyAccountActivity;
 import themollo.app.mollo.R;
@@ -229,9 +230,9 @@ public class HomeActivity extends AppUtilBasement {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //mBluetoothGatt = device.connectGatt(this, false, mGattCallback);
                         Toast.makeText(HomeActivity.this, "'확인'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(HomeActivity.this, DiffuserInfo.class);
+//                        Intent intent = new Intent(HomeActivity.this, DiffuserInfo.class);
+                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                         startActivity(intent);
                     }
                 })
@@ -361,4 +362,9 @@ public class HomeActivity extends AppUtilBasement {
     public void butterBind() {
         ButterKnife.bind(this);
     }
+
+
+
+
+
 }

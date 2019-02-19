@@ -27,7 +27,8 @@ public class MolloApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        MultiDex.install(getApplicationContext());
+//        MultiDex.install(getApplicationContext());
+        MultiDex.install(this);
         MolloApplication.instance = this;
         RxPaparazzo.register(this);
         KakaoSDK.init(new KakaoSDKAdapter());
@@ -40,16 +41,11 @@ public class MolloApplication extends MultiDexApplication {
         Typekit.getInstance().add("OTFB", getFontType(OTFB));
         Typekit.getInstance().add("RoundR", getFontType(RoundR));
         Typekit.getInstance().add("RoundL", getFontType(RoundL));
-
-
-
-
     }
 
     private Typeface getFontType(String font){
         return Typekit.createFromAsset(this, font);
     }
-
     public static MolloApplication getInstance(){
         return instance;
     }
