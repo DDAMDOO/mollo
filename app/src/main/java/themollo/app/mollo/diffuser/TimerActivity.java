@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,9 @@ public class TimerActivity extends Activity {
 
         Intent intent = getIntent();
         String cdVal = intent.getStringExtra("countdown_val");
+
+        Log.d("asdfasdF",String.valueOf(intent)+"");
+
         //타이머에서 설정한 시간을 가져온 intent
         int cd_val = Integer.parseInt(cdVal);
         if(cd_val==0)
@@ -62,7 +66,6 @@ public class TimerActivity extends Activity {
             }
         };
         timer.start();  // 타이머 시작
-
     }
     @Override
     public void onBackPressed() {
