@@ -223,33 +223,6 @@ public class HomeActivity extends AppUtilBasement {
         startActivity(intent);
     }
 
-//    void show(){
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setTitle("연결 확인")
-//                .setMessage("기기와 연결되어있습니까?")
-//                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        Toast.makeText(HomeActivity.this, "'확인'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
-////                        Intent intent = new Intent(HomeActivity.this, DiffuserInfo.class);
-//                        Intent intent = new Intent(HomeActivity.this, MainActivity.class);
-//                        startActivity(intent);
-//                    }
-//                })
-//                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
-//        @Override
-//        public void onClick(DialogInterface dialog, int which) {
-//            Toast.makeText(HomeActivity.this, "'취소'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
-//            Intent intent = new Intent(HomeActivity.this, DiffuserPopup.class);
-//            startActivity(intent);
-//        }
-//    });
-//    AlertDialog dialog = builder.create();
-//    //dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.base_background_gradient));
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
-//        dialog.show();
-//}
-
 
 
     @OnClick(R.id.ivTopCircle)
@@ -266,10 +239,7 @@ public class HomeActivity extends AppUtilBasement {
 //            moveTo(SketchBook.class); // for debug
             moveTo(AlarmActivity.class);
         }
-
     }
-
-
 
     @OnClick(R.id.tvLullabyButton)
     void moveToLullabyAnim() {

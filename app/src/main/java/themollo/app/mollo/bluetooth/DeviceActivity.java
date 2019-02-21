@@ -110,24 +110,6 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
         okbutton=(Button)findViewById(R.id.tvOk1);
         okbutton.setOnClickListener(this);
 
-
-        BluetoothGattService disService = mConnGatt.getService(UUID.fromString("6e400001-b5a3-f393-e0a9-e50e24dcca9e"));
-        if (disService == null) {
-            Log.d("", "Dis service not found!");
-            return;
-        }
-
-        BluetoothGattCharacteristic characteristic = disService.getCharacteristic(UUID.fromString("6e400002-b5a3-f393-e0a9-e50e24dcca9e"));
-        if (characteristic == null) {
-            Log.d("characteristic 에러", "charateristic not found!");
-            return;
-            //fb256b0
-        }
-        characteristic.setValue(new byte[]{0x61, 0x74});
-
-        if (mConnGatt.writeCharacteristic(characteristic)) {
-            Log.d("btcheck", "미리 화긴");
-        }
     }
 
     @Override
