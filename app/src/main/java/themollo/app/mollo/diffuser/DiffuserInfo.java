@@ -254,7 +254,7 @@ public class DiffuserInfo extends AppCompatActivity {
     void show() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("연결 확인")
-                .setMessage("기기와 연결되어있습니까?")
+                .setMessage("기기와 연결하시겠습니까?")
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -273,8 +273,15 @@ public class DiffuserInfo extends AppCompatActivity {
                     }
                 });
         AlertDialog dialog = builder.create();
-        //dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.base_background_gradient));
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
+
+        dialog.setOnShowListener( new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface arg0) {
+                dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.BLACK);
+                dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.BLACK);
+            }
+        });
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 255, 255, 255)));
         dialog.show();
     }
 }
