@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_width="269dp"
+    android:layout_height="294.5dp"
     android:background="@drawable/popup_background_alpha"
-    tools:context=".bluetooth.DeviceActivity">
+    tools:context="themollo.app.mollo.util.DiffuserPopup">
 
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/diffuser_time_sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="87.5dp"
+        android:gravity="center"
+        android:letterSpacing="0"
+        android:text="@string/diffuser_time"
+        android:textColor="@color/white"
+        android:textSize="29sp"
+        android:textStyle="bold" />
 
         <LinearLayout
+            android:id="@+id/scent_frame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/scent_frame1"
+            android:layout_below="@id/diffuser_time_sub"
             android:layout_centerHorizontal="true"
             android:orientation="horizontal">
 
@@ -42,36 +49,63 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/timer_frame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scent_frame"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/timer1_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20분" />
 
+            <Button
+                android:id="@+id/timer2_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40분" />
+
+            <Button
+                android:id="@+id/timer3_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="60분" />
+
+        </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/scent_frame1"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center"
-        android:orientation="horizontal">
+        android:gravity="center_horizontal"
+        android:layout_below="@id/timer_frame">
+
 
         <Button
-            android:id="@+id/timer1_btn"
+            android:id="@+id/tvOk1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="20분" />
-
-        <Button
-            android:id="@+id/timer2_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="40분" />
-
-        <Button
-            android:id="@+id/timer3_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="60분" />
-
+            android:text="OK" />
 
     </LinearLayout>
-</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/valueContainer"
+        android:layout_width="289dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/diffuser_time_sub"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp">
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+
+
+
 

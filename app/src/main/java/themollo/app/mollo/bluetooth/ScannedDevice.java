@@ -16,6 +16,7 @@ public class ScannedDevice {
         if (device == null) {
             throw new IllegalArgumentException("BluetoothDevice is null");
         }
+
         mDevice = device;
         mDisplayName = device.getName();
         if ((mDisplayName == null) || (mDisplayName.length() == 0)) {

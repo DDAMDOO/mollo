@@ -1,13 +1,18 @@
 package themollo.app.mollo.diffuser;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
@@ -30,6 +35,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import themollo.app.mollo.R;
+import themollo.app.mollo.bluetooth.DeviceActivity;
+import themollo.app.mollo.bluetooth.MainActivity;
+import themollo.app.mollo.util.DiffuserPopup;
 
 public class DiffuserInfo extends AppCompatActivity {
     TextView textView; //결과를 띄어줄 TextView
@@ -181,7 +189,6 @@ public class DiffuserInfo extends AppCompatActivity {
             }
 
 
-
         }.execute();
 
 
@@ -190,9 +197,9 @@ public class DiffuserInfo extends AppCompatActivity {
         intent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Intent intent = new Intent(DiffuserInfo.this, DiffuserTime.class);
-                startActivity(intent);
+                show();
+//                Intent intent = new Intent(DiffuserInfo.this, DeviceActivity.class);
+//                startActivity(intent);
             }
         });
 
@@ -236,11 +243,38 @@ public class DiffuserInfo extends AppCompatActivity {
 
             //Total steps covered for that day
 
-            if (aLong >= 1000 && temp > 5) {
+            if (aLong >= 10000 && temp > 5) {
 
                 rc_scent.setText(String.valueOf("페퍼민트"));
             } else
                 rc_scent.setText(String.valueOf("라벤더"));
         }
+    }
+
+    void show() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("연결 확인")
+                .setMessage("기기와 연결되어있습니까?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(DiffuserInfo.this, "'확인'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(HomeActivity.this, DiffuserInfo.class);
+                        Intent intent = new Intent(DiffuserInfo.this, MainActivity.class);
+                        startActivity(intent);
+                    }
+                })
+                .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(DiffuserInfo.this, "'취소'버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(DiffuserInfo.this, DiffuserPopup.class);
+                        startActivity(intent);
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        //dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.base_background_gradient));
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.argb(100, 200, 200, 200)));
+        dialog.show();
     }
 }

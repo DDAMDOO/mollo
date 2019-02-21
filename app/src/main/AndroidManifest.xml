@@ -49,63 +49,83 @@
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id"
             tools:replace="android:value" /> <!-- activities -->
-        <activity android:name=".splash.SplashActivity">
+        <activity android:name=".splash.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".sample.MainActivity" />
-        <activity android:name=".login.sns_login.LoginActivity" />
-        <activity android:name=".sample.SensorActivity" />
-        <activity android:name=".firebase.SignInActivity" />
-        <activity android:name=".firebase.SignUpActivity" />
-        <activity android:name=".firebase.FindPwdActivity" />
-        <activity android:name=".survey.DoSurveyActivity" />
-        <activity android:name=".sample.BackgroundSampleActivity" />
-        <activity android:name=".sample.NaviSampleActivity" />
+        <activity android:name=".sample.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".login.sns_login.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sample.SensorActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".firebase.SignInActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".firebase.SignUpActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".firebase.FindPwdActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".survey.DoSurveyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sample.BackgroundSampleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sample.NaviSampleActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".lullaby.LullabyActivity"
-            android:theme="@style/BaseAppTheme" />
-        <activity android:name=".sample.CircularBarActivity" />
-        <activity android:name=".tutorial.TutorialActivity" />
-        <activity android:name=".alarm.AlarmActivity" />
+            android:theme="@style/BaseAppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sample.CircularBarActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".tutorial.TutorialActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".alarm.AlarmActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".home.HomeActivity"
-            android:theme="@style/BaseAppTheme">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+            android:theme="@style/BaseAppTheme"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".util.SketchBook"
-            android:theme="@style/BaseAppTheme" />
-        <activity android:name=".account.MyAccountActivity" />
-        <activity android:name=".analysis.AnalysisActivity" />
-        <activity android:name=".util.SketchBook2" />
+            android:theme="@style/BaseAppTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".account.MyAccountActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".analysis.AnalysisActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".util.SketchBook2"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".sample.AfterActivity"
-            android:theme="@style/BaseAppTheme" />
+            android:theme="@style/BaseAppTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".sample.BeforeActivity"
-            android:theme="@style/BaseAppTheme" />
+            android:theme="@style/BaseAppTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".sleeping.SleepActivity"
-            android:theme="@style/SleepTheme" />
+            android:theme="@style/SleepTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".sleeping.SleepTimePopup"
-            android:theme="@style/PopupTheme" />
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".survey.SurveyResultPopup"
-            android:theme="@style/PopupTheme" />
-        <activity android:name=".lullaby.NowPlayingActivity" />
-        <activity android:name=".lullaby.SleepSoundActivity" />
-        <activity android:name=".sleeping.SleepingActivity" />
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".lullaby.NowPlayingActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".lullaby.SleepSoundActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sleeping.SleepingActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".util.DiffuserPopup"
             android:screenOrientation="portrait"
@@ -137,11 +157,13 @@
             android:theme="@style/PopupTheme" />
         <activity
             android:name=".bluetooth.DeviceActivity"
-            android:theme="@style/PopupTheme">
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".bluetooth.MainActivity"
-            android:theme="@style/PopupTheme"/>
+            android:theme="@style/PopupTheme"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
