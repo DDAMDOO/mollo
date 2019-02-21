@@ -45,7 +45,7 @@ public class TimerActivity extends Activity {
                 int hour = result / 3600;
                 int min = (result / 60) % 60;
                 int sec = result % 60;
-                Log.d("타이머", result + ""+hour+" "+min+" "+sec);
+                Log.d("타이머", result + " "+hour+" "+min+" "+sec);
                 String text = String.format("%02d : %02d : %02d", hour, min, sec);
                 mText.setText(text);
                 result--;
