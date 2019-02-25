@@ -32,15 +32,12 @@ public class ScannedDevice {
     public int getRssi() {
         return mRssi;
     }
-
     public void setRssi(int rssi) {
         mRssi = rssi;
     }
-
     public String getDisplayName() {
         return mDisplayName;
     }
-
     public void setDisplayName(String displayName) {
         mDisplayName = displayName;
     }

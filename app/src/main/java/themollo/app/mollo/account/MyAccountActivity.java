@@ -1,11 +1,8 @@
 package themollo.app.mollo.account;
 
 import android.annotation.SuppressLint;
-import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
-import android.net.Uri;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatDrawableManager;
 import android.view.View;
@@ -15,15 +12,12 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.facebook.AccessToken;
-import com.facebook.login.Login;
 import com.facebook.login.LoginManager;
-import com.facebook.share.Share;
 import com.kakao.auth.Session;
 import com.kakao.usermgmt.UserManagement;
 import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.miguelbcr.ui.rx_paparazzo2.RxPaparazzo;
 import com.miguelbcr.ui.rx_paparazzo2.entities.FileData;
-import com.squareup.picasso.Picasso;
 import com.yalantis.ucrop.UCrop;
 
 import java.io.File;
@@ -31,11 +25,9 @@ import java.io.File;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import themollo.app.mollo.R;
-import themollo.app.mollo.login.sns_login.LoginActivity;
 import themollo.app.mollo.tutorial.TutorialActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 

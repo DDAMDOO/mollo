@@ -18,8 +18,6 @@
 package themollo.app.mollo.analysis;
 
 
-import android.support.v4.app.Fragment;
-
 import themollo.app.mollo.util.FragUtilBasement;
 
 public abstract class ChartFragment extends FragUtilBasement {

@@ -1,11 +1,5 @@
 package themollo.app.mollo.lullaby;
 
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import de.hdodenhof.circleimageview.CircleImageView;
-
 /**
  * Created by alex on 2018. 7. 19..
  */

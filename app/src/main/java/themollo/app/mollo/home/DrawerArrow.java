@@ -13,17 +13,14 @@ import android.graphics.Path;
 import android.graphics.PathMeasure;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.view.View;
 
 import static android.graphics.Color.BLACK;
 import static android.graphics.Paint.ANTI_ALIAS_FLAG;
-import static android.graphics.Paint.Cap;
 import static android.graphics.Paint.Cap.BUTT;
 import static android.graphics.Paint.Cap.ROUND;
 import static android.graphics.Paint.SUBPIXEL_TEXT_FLAG;
 import static android.graphics.Paint.Style.STROKE;
 import static android.graphics.PixelFormat.TRANSLUCENT;
-import static android.support.v4.widget.DrawerLayout.DrawerListener;
 import static java.lang.Math.sqrt;
 
 public class DrawerArrow extends Drawable {

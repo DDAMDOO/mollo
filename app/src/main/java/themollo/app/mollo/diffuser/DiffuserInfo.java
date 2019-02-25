@@ -35,7 +35,6 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import themollo.app.mollo.R;
-import themollo.app.mollo.bluetooth.DeviceActivity;
 import themollo.app.mollo.bluetooth.MainActivity;
 import themollo.app.mollo.util.DiffuserPopup;
 
@@ -134,19 +133,13 @@ public class DiffuserInfo extends AppCompatActivity {
             protected Object doInBackground(Object[] params) {
                 try {
                     doc = Jsoup.connect("http://www.weather.go.kr/weather/forecast/timeseries.jsp").get(); //기상청 페이지 로딩
-                    //contents_temp = doc.select("div.now_weather1");//셀렉터로 현재 날시를 가져옴
-                    //contents_temp = doc.select(".now_weather1");
-                    //contents_temp = doc.select(".now_weather1_center.temp1.MB10");
                     contents_temp = doc.select(".now_weather1_center");
 
-                    // doc = Jsoup.connect("https://weather.naver.com/rgn/townWetr.nhn").get();
-                    // contents_other = doc.select("div.fl");//셀렉터로 현재 날시를 가져옴
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
 
                 Temperature = "";
-                //Temperature = "온도\t\t풍량\t\t습도\t\t강수량\n";// + contents_temp.text()+"\n";
                 int cnt = 0;//숫자를 세기위한 변수
                 for (Element element : contents_temp) {
                     cnt++;
@@ -198,8 +191,6 @@ public class DiffuserInfo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 show();
-//                Intent intent = new Intent(DiffuserInfo.this, DeviceActivity.class);
-//                startActivity(intent);
             }
         });
 
@@ -217,7 +208,6 @@ public class DiffuserInfo extends AppCompatActivity {
 
     private class FetchStepsAsync extends AsyncTask<Object, Object, Long> {
         protected Long doInBackground(Object... params) {
-            Log.d("가나다", "steps");
             long total = 0;
             PendingResult<DailyTotalResult> result = Fitness.HistoryApi.readDailyTotal(mClient, DataType.TYPE_STEP_COUNT_DELTA);
             DailyTotalResult totalResult = result.await(30, TimeUnit.SECONDS);
@@ -236,7 +226,6 @@ public class DiffuserInfo extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Long aLong) {
-            Log.d("가나다", String.valueOf(aLong) + "steps");
             super.onPostExecute(aLong);
             final TextView textView = findViewById(R.id.daily_step);
             textView.setText(String.valueOf(aLong) + " steps");

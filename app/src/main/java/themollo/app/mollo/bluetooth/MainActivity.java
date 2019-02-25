@@ -14,7 +14,6 @@ import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothManager;
 import android.content.Intent;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -24,7 +23,6 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import themollo.app.mollo.R;
-import themollo.app.mollo.diffuser.DiffuserInfo;
 
 
 public class MainActivity extends Activity implements BluetoothAdapter.LeScanCallback {
@@ -66,7 +64,6 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
                     boolean Accepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
 
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
                         if (!Accepted  )
                         {
                             showDialogforPermission("앱을 실행하려면 퍼미션을 허가하셔야합니다.");
@@ -82,7 +79,6 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
     }
 
     private void showDialogforPermission(String msg) {
-
         final AlertDialog.Builder myDialog = new AlertDialog.Builder( MainActivity.this);
         myDialog.setTitle("알림");
         myDialog.setMessage(msg);
@@ -196,7 +192,6 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
                 }
             }
         });
-
         stopScan();
     }
 
@@ -217,5 +212,4 @@ public class MainActivity extends Activity implements BluetoothAdapter.LeScanCal
         setProgressBarIndeterminateVisibility(false);
         invalidateOptionsMenu();
     }
-
 }

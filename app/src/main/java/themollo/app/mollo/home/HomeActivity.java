@@ -1,11 +1,8 @@
 package themollo.app.mollo.home;
 
 import android.app.ActivityOptions;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.support.v4.widget.DrawerLayout;
@@ -19,7 +16,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Timer;
 
@@ -27,7 +23,6 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import themollo.app.mollo.bluetooth.MainActivity;
 import themollo.app.mollo.diffuser.DiffuserInfo;
 import themollo.app.mollo.account.MyAccountActivity;
 import themollo.app.mollo.R;
@@ -36,7 +31,6 @@ import themollo.app.mollo.analysis.AnalysisActivity;
 import themollo.app.mollo.lullaby.SleepSoundActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 import themollo.app.mollo.util.BackPressController;
-import themollo.app.mollo.util.DiffuserPopup;
 
 public class HomeActivity extends AppUtilBasement {
 

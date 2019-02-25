@@ -1,16 +1,10 @@
 package themollo.app.mollo.sample;
 
 import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Slide;
-import android.transition.Transition;
 import android.view.View;
 
-import butterknife.BindString;
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import themollo.app.mollo.R;
 
 public class AfterActivity extends AppCompatActivity {

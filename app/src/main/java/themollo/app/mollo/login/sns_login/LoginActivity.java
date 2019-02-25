@@ -1,6 +1,5 @@
 package themollo.app.mollo.login.sns_login;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -10,7 +9,6 @@ import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -42,23 +40,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import themollo.app.mollo.R;
 import themollo.app.mollo.firebase.FirebaseLogin;
-import themollo.app.mollo.firebase.SignInActivity;
 import themollo.app.mollo.firebase.SignUpActivity;
 import themollo.app.mollo.survey.DoSurveyActivity;
 import themollo.app.mollo.util.BackPressController;
 
-
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.util.Base64;
-import android.util.Log;
-
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
-
-import static com.kakao.util.helper.Utility.getPackageInfo;
 
 public class LoginActivity extends FirebaseLogin {
 

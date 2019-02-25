@@ -1,23 +1,17 @@
 package themollo.app.mollo.splash;
 
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
-import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import themollo.app.mollo.R;
-import themollo.app.mollo.login.sns_login.LoginActivity;
 import themollo.app.mollo.tutorial.TutorialActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 

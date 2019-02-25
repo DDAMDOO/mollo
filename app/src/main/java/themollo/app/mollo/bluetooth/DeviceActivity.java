@@ -4,7 +4,6 @@ import java.util.UUID;
 
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothGatt;
@@ -14,19 +13,15 @@ import android.bluetooth.BluetoothGattService;
 import android.bluetooth.BluetoothManager;
 import android.bluetooth.BluetoothProfile;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import butterknife.BindView;
 import themollo.app.mollo.R;
 import themollo.app.mollo.diffuser.TimerActivity;
 
@@ -133,9 +128,6 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
     }
 
 
-    ////////////////////////////////////////////////여기부분////////////////////////////////////////////////////////
-
-
     public String sbVal;
     @Override
     public void onClick(View v) {
@@ -209,7 +201,6 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
             if (characteristic == null) {
                 Log.d("characteristic 에러", "charateristic not found!");
                 return;
-                //fb256b0
             }
             characteristic.setValue(new byte[]{0x61, 0x74, 0x46, 0x33});
             sbVal="60";
@@ -219,7 +210,6 @@ public class DeviceActivity extends Activity implements View.OnClickListener {
         }else if(v.getId()==R.id.tvOk1) {
             Intent intent = new Intent(DeviceActivity.this, TimerActivity.class);
             intent.putExtra("countdown_val",sbVal);
-//            Log.d("tvok",sbVal);
             startActivity(intent);
         }
     }

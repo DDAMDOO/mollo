@@ -10,13 +10,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
-import java.nio.file.attribute.DosFileAttributes;
 
 import themollo.app.mollo.survey.DoSurveyActivity;
 import themollo.app.mollo.util.AppUtilBasement;
-import themollo.app.mollo.sample.MainActivity;
 
 /**
  * Created by alex on 2018. 7. 12..

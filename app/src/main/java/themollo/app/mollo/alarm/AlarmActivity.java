@@ -14,7 +14,6 @@ import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import themollo.app.mollo.R;
-import themollo.app.mollo.sleeping.SleepActivity;
 import themollo.app.mollo.sleeping.SleepingActivity;
 import themollo.app.mollo.util.AppUtilBasement;
 import themollo.app.mollo.util.MySeekArc;
@@ -127,12 +126,6 @@ public class AlarmActivity extends AppUtilBasement{
                 else {
                     tvTotalSleepTime.setText(a + "");
                 }
-//                to = getTotalSleepHourValue() / 60;
-//
-//                if (from != to) {
-//                    timelyTextView.animate(from, to).setDuration(800).start();
-//                    from = to;
-//                }
 
                 tvFollowSleepTime.setText(getTimeText(progress, "sleepTime"));
 
@@ -179,12 +172,6 @@ public class AlarmActivity extends AppUtilBasement{
                 else {
                     tvTotalSleepTime.setText(a + "");
                 }
-//
-//                if (from != to) {
-//                    timelyTextView.animate(from, to).setDuration(800).start();
-//                    from = to;
-//                }
-
 
                 tvFollowWakeupTime.setText(getTimeText(progress, "wakeupTime"));
 
@@ -337,87 +324,4 @@ public class AlarmActivity extends AppUtilBasement{
         tvFollowWakeupTime.setTranslationY(bottomThumbYPos);
 
     }
-
-//    private AlarmManager alarmManager;
-//    private GregorianCalendar gregorianCalendar;
-//    //    private DatePicker datePicker;
-////    private TimePicker timePicker;
-//    private NotificationManager notificationManager;
-//
-//    @BindView(R.id.date_picker)
-//    DatePicker datePicker;
-//    @BindView(R.id.time_picker)
-//    TimePicker timePicker;
-//    @BindView(R.id.llBack)
-//    LinearLayout llBack;
-//
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        butterBind();
-//        setButtonListener();
-//        setUI();
-//
-//    }
-//
-//    public void setUI() {
-//        notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-//        alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-//        gregorianCalendar = new GregorianCalendar();
-//        Log.i("HelloAlarmActivity", gregorianCalendar.getTime().toString());
-//
-//        setContentView(R.layout.activity_alarm);
-//
-//        datePicker = (DatePicker) findViewById(R.id.date_picker);
-//        datePicker.init(gregorianCalendar.get(Calendar.YEAR), gregorianCalendar.get(Calendar.MONTH), gregorianCalendar.get(Calendar.DAY_OF_MONTH), this);
-//        timePicker = (TimePicker) findViewById(R.id.time_picker);
-//        timePicker.setCurrentHour(gregorianCalendar.get(Calendar.HOUR_OF_DAY));
-//        timePicker.setCurrentMinute(gregorianCalendar.get(Calendar.MINUTE));
-//        timePicker.setOnTimeChangedListener(this);
-//
-//    }
-//
-//    //알람의 설정
-//    private void setAlarm() {
-//        alarmManager.set(AlarmManager.RTC_WAKEUP, gregorianCalendar.getTimeInMillis(), pendingIntent());
-//        Log.i("HelloAlarmActivity", gregorianCalendar.getTime().toString());
-//    }
-//
-//    //알람의 해제
-//    private void resetAlarm() {
-//        alarmManager.cancel(pendingIntent());
-//    }
-//
-//    //알람의 설정 시각에 발생하는 인텐트 작성
-//    private PendingIntent pendingIntent() {
-//        Intent i = new Intent(getApplicationContext(), SketchBook.class);
-//        PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
-//        return pi;
-//    }
-//
-//    //일자 설정 클래스의 상태변화 리스너
-//    public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-//        gregorianCalendar.set(year, monthOfYear, dayOfMonth, timePicker.getCurrentHour(), timePicker.getCurrentMinute());
-//        Log.i("HelloAlarmActivity", gregorianCalendar.getTime().toString());
-//    }
-//
-//    //시각 설정 클래스의 상태변화 리스너
-//    public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
-//        gregorianCalendar.set(datePicker.getYear(), datePicker.getMonth(), datePicker.getDayOfMonth(), hourOfDay, minute);
-//        Log.i("HelloAlarmActivity", gregorianCalendar.getTime().toString());
-//    }
-//
-//    @Override
-//    public void setButtonListener() {
-//        llBack.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public void butterBind() {
-//        ButterKnife.bind(this);
-//    }
 }

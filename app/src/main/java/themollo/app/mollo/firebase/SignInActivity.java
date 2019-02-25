@@ -1,8 +1,6 @@
 package themollo.app.mollo.firebase;
 
-import android.content.SharedPreferences;
 import android.support.design.widget.TextInputEditText;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -11,7 +9,6 @@ import android.widget.LinearLayout;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import themollo.app.mollo.R;
-import themollo.app.mollo.survey.DoSurveyActivity;
 
 public class SignInActivity extends FirebaseLogin {
 
